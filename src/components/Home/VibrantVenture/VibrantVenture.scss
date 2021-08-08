@@ -1,5 +1,48 @@
 .VibrantVenture {
-  height: 1510px;
-  border-top: 1px solid white;
+  height: 550px;
   border-bottom: 1px solid white;
+}
+
+.vibrant-venture-container {
+  padding-left: 3.5em;
+}
+
+.VibrantVenture .vibrant-venture-header {
+  padding-bottom: 20px;
+}
+
+.VibrantVenture .learn-more-btn {
+  border: none;
+  border-radius: 40px;
+  box-shadow:inset 0px 27px 0px -24px #e67a73;
+  background-color: rgb(192, 45, 26);
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 20px;
+  margin-top: 50px;
+}
+
+.learn-more-btn:hover {
+  background-color: #d5463e;
+}
+
+.learn-more-btn:active {
+  position:relative;
+  top:1px;
+}
+
+.VibrantVenture .or {
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.VibrantVenture .buy-now-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
 }

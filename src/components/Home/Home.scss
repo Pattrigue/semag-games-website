@@ -5,22 +5,19 @@
   position: relative;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .text-container {
-  text-align: center;
   color: white;
-  font-size: 35px;
+  font-size: 25px;
   flex-direction: column;
   position: relative;
 }
 
 .header-text {
   font-weight: bold;
-  font-size: 50px;
-  padding-bottom: 55px;
+  font-size: 40px;
 }
 
 .bg-overlay {
