@@ -1,13 +1,13 @@
 import "./Content.scss"
-import Header from "../Header/Header.js";
-import Welcome from "../Welcome/Welcome.js";
+import Welcome from "../Home/Welcome/Welcome.js";
+import VibrantVenture from "../Home/VibrantVenture/VibrantVenture.js";
 import React from "react";
 
 function Content() {
     return (
         <div className="Content">
-            <Header/>
             <Welcome/>
+            <VibrantVenture/>
         </div>
     );
 }

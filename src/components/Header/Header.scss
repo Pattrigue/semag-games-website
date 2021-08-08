@@ -14,13 +14,14 @@ $content-margin: 10px;
 }
 
 .Header .company-logo-container {
+    padding-left: $content-margin;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
 .Header .company-name {
-    margin-left: $content-margin;
+    margin-left: 20px;
     font-size: 40px;
     font-weight: bold;
 }

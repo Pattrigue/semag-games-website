@@ -1,9 +1,8 @@
-import React from "react"
+import React from "react";
 import { NavLink } from "react-router-dom"
 import './Header.scss'
 
 function Header() {
-    console.log(`/${process.env.PUBLIC}semag-logo.png`);
     return (
         <div className="Header">
             <div className="company-logo-container">
