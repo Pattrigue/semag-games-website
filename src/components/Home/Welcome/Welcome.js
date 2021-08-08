@@ -4,7 +4,7 @@ import "../Home.scss";
 
 function Welcome() {
     return (
-        <div className="Welcome"
+        <div className="Welcome main-container"
              style={{
                  backgroundImage: `url(${process.env.PUBLIC_URL + '/vibrant-venture-banner.png'})`
              }}>
