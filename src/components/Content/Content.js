@@ -1,6 +1,7 @@
 import "./Content.scss"
 import Welcome from "../Home/Welcome/Welcome.js";
 import VibrantVenture from "../Home/VibrantVenture/VibrantVenture.js";
+import Community from "../Home/Community/Community.js";
 import React from "react";
 
 function Content() {
@@ -8,6 +9,7 @@ function Content() {
         <div className="Content">
             <Welcome/>
             <VibrantVenture/>
+            <Community/>
         </div>
     );
 }

@@ -3,8 +3,8 @@
   border-bottom: 1px solid white;
 }
 
-.vibrant-venture-container {
-  padding-left: 3.5em;
+.VibrantVenture .vibrant-venture-container {
+  padding-left: 6em;
 }
 
 .VibrantVenture .vibrant-venture-header {
@@ -25,11 +25,11 @@
   margin-top: 50px;
 }
 
-.learn-more-btn:hover {
+.VibrantVenture .learn-more-btn:hover {
   background-color: #d5463e;
 }
 
-.learn-more-btn:active {
+.VibrantVenture .learn-more-btn:active {
   position:relative;
   top:1px;
 }
