@@ -8,6 +8,7 @@ function Welcome() {
              style={{
                  backgroundImage: `url(${process.env.PUBLIC_URL + '/vibrant-venture-banner.png'})`
              }}>
+            <div className="bg-overlay"/>
             <div className="container text-container">
                 <div className="header-text welcome-text">
                     Welcome
