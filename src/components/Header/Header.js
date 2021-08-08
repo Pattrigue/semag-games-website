@@ -6,13 +6,13 @@ function Header() {
     console.log(`/${process.env.PUBLIC}semag-logo.png`);
     return (
         <div className="Header">
-            <div className="company-name">
+            <div className="company-logo-container">
                 <img src={`/${process.env.PUBLIC_URL}semag-logo.png`}
-                     width="50"
-                     height="50"
+                     width="80"
+                     height="80"
                      alt=""/>
-                <div className="title">
-                    Semag Games
+                <div className="company-name">
+                    SEMAG GAMES
                 </div>
             </div>
             <div className="nav-bar">
