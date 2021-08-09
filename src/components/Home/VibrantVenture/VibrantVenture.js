@@ -19,9 +19,11 @@ function VibrantVenture() {
                     ultiple unique abilities that can be combined for <br/>
                     extremely versatile, fluid and fun movement!
                 </div>
-                <button className="learn-more-btn">Learn More</button>
-                <span className="or">or</span>
-                <Link className="buy-now-link">Buy Now</Link>
+                <div className="button-group">
+                    <button className="learn-more-btn">Learn More</button>
+                    <span className="or">or</span>
+                    <Link className="buy-now-link">Buy Now</Link>
+                </div>
             </div>
         </div>
     );
