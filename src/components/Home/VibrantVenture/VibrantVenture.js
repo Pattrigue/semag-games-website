@@ -1,6 +1,4 @@
 import React from "react";
-import "./VibrantVenture.scss";
-import "../Home.scss";
 import {Link} from "react-router-dom";
 
 function VibrantVenture() {

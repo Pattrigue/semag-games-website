@@ -1,6 +1,4 @@
 import React from "react";
-import "./Welcome.scss";
-import "../Home.scss";
 
 function Welcome() {
     return (

@@ -1,0 +1,176 @@
+/**
+	Home page styling.
+*/
+
+// HOME \\
+.main-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  color: white;
+  font-size: 25px;
+  flex-direction: column;
+  position: relative;
+}
+
+.header-text {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+// WELCOME \\
+.Welcome {
+  height: 450px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: center;
+  justify-content: center;
+}
+
+.Welcome .welcome-text {
+  font-size: 55px;
+  padding-bottom: 55px;
+}
+
+.Welcome .about-text {
+  margin-top: 50px;
+}
+
+// VIBRANT VENTURE \\
+.VibrantVenture {
+  height: 550px;
+  border-bottom: 1px solid white;
+}
+
+.VibrantVenture .vibrant-venture-container {
+  padding-left: 6em;
+}
+
+.VibrantVenture .vibrant-venture-header {
+  padding-bottom: 20px;
+}
+
+.VibrantVenture .learn-more-btn {
+  border: none;
+  border-radius: 40px;
+  box-shadow:inset 0px 27px 0px -24px #e67a73;
+  background-color: rgb(192, 45, 26);
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 20px;
+  margin-top: 50px;
+}
+
+.VibrantVenture .learn-more-btn:hover {
+  background-color: #d5463e;
+}
+
+.VibrantVenture .learn-more-btn:active {
+  position:relative;
+  top:1px;
+}
+
+.VibrantVenture .or {
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.VibrantVenture .buy-now-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 25px;
+}
+
+// COMMUNITY \\
+.Community {
+  height: 550px;
+  border-bottom: 1px solid white;
+  text-align: left;
+  justify-content: left
+}
+
+.Community .community-container {
+  left: 55%;
+  width: 40%;
+}
+
+.Community .discord-text {
+  padding-bottom: 25px;
+}
+
+.Community .youtube-twitter-text {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.Community .btn {
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 20px 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.Community .btn-icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+}
+
+.Community .discord-btn {
+  border-radius: 20px;
+  box-shadow:inset 0 27px 0px -24px #757cd3;
+  background-color: rgb(86, 98, 246);
+  font-size: 22px;
+}
+
+.Community .discord-btn:hover {
+  background-color: #626df8;
+}
+
+.Community .discord-btn:active {
+  position:relative;
+  top:1px;
+}
+
+.Community .social-media-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.Community .youtube-btn {
+  border-radius: 20px;
+  box-shadow:inset 0 27px 0px -24px #f56666;
+  background-color: rgb(229, 19, 19);
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.Community .twitter-btn {
+  border-radius: 20px;
+  box-shadow:inset 0 27px 0px -24px #8ac9ef;
+  background-color: rgb(80, 171, 241);
+  font-size: 20px;
+}

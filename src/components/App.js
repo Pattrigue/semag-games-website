@@ -1,4 +1,3 @@
-import "./App.scss";
 import Content from "./Content/Content.js";
 import Footer from "./Footer/Footer.js";
 import { BrowserRouter as Router } from "react-router-dom";

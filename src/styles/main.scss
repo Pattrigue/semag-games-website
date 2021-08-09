@@ -1,0 +1,19 @@
+/**
+	This file is for imports only!
+*/
+
+// VARIABLES \\
+@import "variables/colors";
+@import "variables/sizes";
+
+// LAYOUTS \\
+@import "layouts/base";
+@import "layouts/page";
+
+// PAGES \\
+@import "pages/home";
+
+// COMPONENTS \\
+@import "components/header";
+@import "components/content";
+@import "components/footer";
