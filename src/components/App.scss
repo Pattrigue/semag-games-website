@@ -1,6 +1,8 @@
-.page {
+.App.page {
+	position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+	overflow-x: hidden; // This caused the wierdass small width on mobile.
 }

@@ -1,3 +1,6 @@
+@use "/src/variables";
+
 .Content {
+		padding-top: variables.$header-height; // Make space for the header.
     flex-grow: 1;
 }
