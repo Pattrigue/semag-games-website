@@ -5,48 +5,83 @@
 $content-margin: 10px;
 
 .Header {
-    box-sizing: border-box;
-    width: 100%;
-		height: $headerHeight;
-    display: flex;
-    padding: 1em;
-    background-color: rgb(192, 45, 26);
-    color: #fff;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+	display: flex;
+	position: fixed;
+
+	height: $header-height-base;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	
+	flex-direction: row;
+
+	background-color: rgb(192, 45, 26);
+
+	@include md {
+		height: $header-height-md;
+	}
 }
 
 .Header .company-logo-container {
-    padding-left: $content-margin;
-    height: 100%;
-    display: flex;
-    align-items: center;
+	display: flex;
+	
+	align-self: start;
+
+	height: 100%;
+	padding: 0px 20px 0px 20px;
+	align-items: center;
+
+	img {
+		height: 50px;
+		width: 50px;
+	}
+
+	@include md {
+		img {
+			height: 75px;
+			width: 75px;
+		}
+	}
 }
 
 .Header .company-name {
-    margin-left: 20px;
-    font-size: 40px;
-    font-weight: bold;
+	display: none;
+
+	@include md {
+		display: block;
+
+		font-size: 25px;
+		margin-left: 20px;
+		font-weight: bold;
+		white-space: nowrap;
+	}
 }
 
 .Header .nav-bar {
-    margin-left: auto;
-    margin-right: $content-margin;
-    font-size: 25px;
+	display: none;
+
+	@include md {
+		display: flex;
+
+		flex-direction: row;
+		align-items: center;
+		
+		margin-left: auto;
+		margin-right: $content-margin;
+		font-size: 25px;
+		white-space: nowrap;
+	}
 }
 
 .Header .nav-link {
-    display: inline-block;
-    padding: 0.5em 1em;
-    color: rgba(255, 255, 255, 0.835);
-    font-weight: bold;
-    text-decoration: none;
+	display: inline-block;
+	padding: 0.5em 1em;
+	color: rgba(255, 255, 255, 0.835);
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .Header .nav-link-active {
-    color: #fff;
-    border-bottom: 2px solid;
+	color: #fff;
+	border-bottom: 2px solid;
 }

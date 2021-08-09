@@ -6,8 +6,6 @@ function Header() {
 				<div className="Header">
 						<div className="company-logo-container">
 								<img src={`/${process.env.PUBLIC_URL}semag-logo.png`}
-										width="80"
-										height="80"
 										alt=""/>
 								<div className="company-name">
 										SEMAG GAMES

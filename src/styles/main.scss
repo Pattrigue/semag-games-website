@@ -6,6 +6,9 @@
 @import "variables/colors";
 @import "variables/sizes";
 
+// MIXINS \\
+@import "mixins/media-queries";
+
 // LAYOUTS \\
 @import "layouts/base";
 @import "layouts/page";

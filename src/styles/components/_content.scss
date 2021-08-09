@@ -3,6 +3,10 @@
 */
 
 .Content {
-	padding-top: $headerHeight; // Make space for the header.
+	padding-top: $header-height-base; // Make space for the header.
 	flex-grow: 1;
+
+	@include md {
+		padding-top: $header-height-md;
+	}
 }
