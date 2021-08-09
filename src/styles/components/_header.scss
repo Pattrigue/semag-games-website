@@ -54,6 +54,7 @@ $content-margin: 10px;
 		margin-left: 20px;
 		font-weight: bold;
 		white-space: nowrap;
+		color: $white;
 	}
 }
 
@@ -76,12 +77,12 @@ $content-margin: 10px;
 .Header .nav-link {
 	display: inline-block;
 	padding: 0.5em 1em;
-	color: rgba(255, 255, 255, 0.835);
+	color: $white-transparent;
 	font-weight: bold;
 	text-decoration: none;
 }
 
 .Header .nav-link-active {
-	color: #fff;
+	color: $white;
 	border-bottom: 2px solid;
 }

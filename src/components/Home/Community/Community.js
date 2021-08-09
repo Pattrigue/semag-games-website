@@ -35,20 +35,18 @@ function Community() {
                     <Link
                         to={{ pathname: "https://www.youtube.com/c/SemagGames" }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}>
-                        <button className="btn youtube-btn">
-                            <YouTubeIcon className="btn-icon"/>
-                            YouTube
-                        </button>
+                        style={{ textDecoration: 'none' }}
+                        className="btn youtube-btn">
+                        <YouTubeIcon className="btn-icon"/>
+                        YouTube
                     </Link>
                     <Link
                         to={{ pathname: "https://twitter.com/pattrigue" }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}>
-                        <button className="btn twitter-btn">
-                            <TwitterIcon className="btn-icon"/>
-                            Twitter
-                        </button>
+                        style={{ textDecoration: 'none' }}
+                        className="btn twitter-btn">
+                        <TwitterIcon className="btn-icon"/>
+                        Twitter
                     </Link>
                 </div>
             </div>

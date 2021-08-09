@@ -52,6 +52,14 @@
   justify-content: center;
 }
 
+.Welcome.main-container {
+  background-position: 10% 0%;
+
+  @include md {
+    background-position: 0%;
+  }
+}
+
 .Welcome .welcome-text {
   font-size: 35px;
   padding-bottom: 55px;
@@ -75,6 +83,14 @@
 
   @include md {
     justify-content: left;
+  }
+}
+
+.VibrantVenture.main-container {
+  background-position: 75% 0%;
+
+  @include md {
+    background-position: 0%;
   }
 }
 
@@ -166,6 +182,14 @@
     justify-content: left;
 
     padding: 100px 0;
+  }
+}
+
+.Community.main-container {
+  background-position: 10% 0%;
+
+  @include md {
+    background-position: 0%;
   }
 }
 
