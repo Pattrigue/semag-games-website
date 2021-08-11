@@ -24,11 +24,10 @@ function Community() {
                     </div>
                     <Link to={{ pathname: "https://discord.gg/semag-games" }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}>
-                        <button className="btn discord-btn">
-                            <DiscordIcon className="btn-icon"/>
-                            Join the Community
-                        </button>
+                        style={{ textDecoration: 'none' }}
+                        className={`btn discord-btn`}>
+                        <DiscordIcon className="btn-icon"/>
+                        Join the Community
                     </Link>
                     <div className="youtube-twitter-text">
                         You can find devlogs and content related to Vibrant Venture and our projects on YouTube. <br/>
