@@ -1,6 +1,6 @@
 import React from "react";
 
-import RadialGradient from "../../RadialGradient";
+import RadialGradient from "../../RadialGradient/RadialGradient";
 
 function Welcome() {
     return (

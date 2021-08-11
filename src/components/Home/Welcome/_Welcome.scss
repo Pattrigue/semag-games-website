@@ -1,0 +1,30 @@
+// WELCOME \\
+.Welcome {
+  height: 450px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: center;
+  justify-content: center;
+}
+
+.Welcome.main-container {
+  background-position: 10% 0%;
+
+  @include md {
+    background-position: 0%;
+  }
+}
+
+.Welcome .welcome-text {
+  font-size: 35px;
+  padding-bottom: 55px;
+
+  @include md {
+    font-size: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+.Welcome .about-text {
+  margin-top: 50px;
+}

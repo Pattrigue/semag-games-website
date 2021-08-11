@@ -4,7 +4,7 @@ import { ReactComponent as DiscordIcon } from "./discord-icon.svg";
 import { ReactComponent as YouTubeIcon } from "./youtube-icon.svg";
 import { ReactComponent as TwitterIcon } from "./twitter-icon.svg";
 
-import RadialGradient from "../../RadialGradient";
+import RadialGradient from "../../RadialGradient/RadialGradient";
 
 function Community() {
     return (

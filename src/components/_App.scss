@@ -1,7 +1,3 @@
-/**
-	Site-level styles.
-*/
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,4 +14,13 @@ code {
 
 .relative {
   position: relative;
+}
+
+.page {
+	position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+	overflow-x: hidden; // This caused the wierdass small width on mobile.
 }

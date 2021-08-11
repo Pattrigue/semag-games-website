@@ -1,9 +1,3 @@
-/**
-	Mixin media queries! AKA your gateway to responsiveness.
-
-	You can call these with "@include".
-*/
-
 // Small devices
 @mixin sm {
 	@media (min-width: #{$screen-sm-min}) {

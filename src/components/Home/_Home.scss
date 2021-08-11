@@ -1,0 +1,39 @@
+// HOME \\
+.main-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.text-container {
+  position: relative;
+
+  color: white;
+  font-size: 16px;
+  padding: 0px 10px 0px 10px;
+
+  flex-direction: column;
+
+  @include md {
+    font-size: 25px;
+  }
+}
+
+.text-container * {
+  z-index: 5;
+}
+
+.header-text {
+  font-weight: bold;
+  font-size: 25px;
+
+  @include md {
+    font-size: 40px;
+  }
+}

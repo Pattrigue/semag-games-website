@@ -1,0 +1,125 @@
+// COMMUNITY \\
+.Community {
+  min-height: 550px;
+  border-bottom: 1px solid white;
+  
+  text-align: center;
+  justify-content: center;
+
+  padding: 50px 0;
+
+  @include md {
+    text-align: left;
+    justify-content: flex-end;
+
+    padding: 100px 0;
+  }
+}
+
+.Community.main-container {
+  background-position: 10% 0%;
+
+  @include md {
+    background-position: 0%;
+
+    align-self: end;
+  }
+}
+
+.Community .community-container {
+  width: 100%;
+
+  @include md {
+    width: 700px;
+  }
+}
+
+.Community .discord-text {
+  padding-bottom: 25px;
+}
+
+.Community .youtube-twitter-text {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.Community .btn {
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 20px 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.Community .btn-icon {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+}
+
+.Community .discord-btn {
+  border-radius: 20px;
+  box-shadow:inset 0 27px 0px -24px #757cd3;
+  background-color: rgb(86, 98, 246);
+  font-size: 22px;
+  align-self: flex-start;
+  width: 225px;
+
+  margin: 0 auto;
+
+  justify-content: center;
+
+  @include md {
+    width: 300px;
+
+    margin: 0;
+  }
+}
+
+.Community .discord-btn:hover {
+  background-color: #626df8;
+}
+
+.Community .discord-btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.Community .social-media-btns {
+  display: flex;
+
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.Community .youtube-btn {
+  border-radius: 20px;
+  box-shadow:inset 0 27px 0px -24px #f56666;
+  background-color: rgb(229, 19, 19);
+  font-size: 20px;
+
+  margin: 0 auto 10px auto;
+
+  @include md {
+    margin: 0 20px 0 0;
+  }
+}
+
+.Community .twitter-btn {
+  border-radius: 20px;
+  box-shadow:inset 0 27px 0px -24px #8ac9ef;
+  background-color: rgb(80, 171, 241);
+  font-size: 20px;
+
+  margin: 0 auto;
+
+  @include md {
+    margin: 0;
+  }
+}
