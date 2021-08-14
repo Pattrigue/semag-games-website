@@ -7,9 +7,11 @@
 }
 
 .main-container.left {
+  text-align: center;
   justify-content: center;
 
   @include md {
+    text-align: left;
     justify-content: left;
   }
 }
