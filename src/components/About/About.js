@@ -1,10 +1,20 @@
 import React from "react";
+import PageItem from "../PageItem/PageItem";
+import TheTeam from "./TheTeam/TheTeam";
 
 function About() {
     return (
-        <div>hi
-            <div>this is still a wip</div>
-            <div>come back later</div>
+        <div className="About">
+            <PageItem
+                className="About"
+                align="center"
+                height="550px"
+                backgroundImage="/town.png"
+                borderTop="1"
+                borderBottom="1"
+            >
+                <TheTeam/>
+            </PageItem>
         </div>
     );
 }

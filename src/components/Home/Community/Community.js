@@ -8,7 +8,7 @@ import Gradient from "../../Gradient/Gradient";
 
 function Community() {
     return (
-        <div className="text-container community-container">
+        <div className="Community">
             <Gradient className="linear-right"/>
             <div className="relative">
                 <div className="header-text">

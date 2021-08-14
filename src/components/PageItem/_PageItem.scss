@@ -2,12 +2,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.main-container-inner {
   position: relative;
 
   display: flex;
   align-items: center;
 
   overflow: hidden;
+
+  width: 100%;
+  height: 100%;
   padding: 50px 50px;
 
   @include md {
@@ -15,7 +21,7 @@
   }
 }
 
-.main-container.left {
+.main-container-inner.left {
   text-align: center;
   justify-content: center;
 
@@ -25,12 +31,12 @@
   }
 }
 
-.main-container.center {
+.main-container-inner.center {
   text-align: center;
   justify-content: center;
 }
 
-.main-container.right {
+.main-container-inner.right {
   text-align: center;
   justify-content: center;
 
