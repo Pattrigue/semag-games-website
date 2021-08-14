@@ -23,7 +23,7 @@ function Header() {
 								<NavLink
 										className="nav-link"
 										activeClassName="nav-link-active"
-										to="/about">Vibrant Venture</NavLink>
+										to="/vibrant-venture">Vibrant Venture</NavLink>
 						</div>
 				</div>
     )
