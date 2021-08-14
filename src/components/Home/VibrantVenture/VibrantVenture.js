@@ -1,12 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import RadialGradient from "../../RadialGradient/RadialGradient";
+import Gradient from "../../RadialGradient/Gradient";
 
 function VibrantVenture() {
     return (
         <div className="VibrantVenture">
-            <RadialGradient />
+            <Gradient className="linear-left"/>
             <div className="relative">
                 <div className="header-text vibrant-venture-header">
                     Vibrant Venture

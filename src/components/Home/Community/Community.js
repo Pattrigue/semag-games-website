@@ -4,12 +4,12 @@ import { ReactComponent as DiscordIcon } from "./discord-icon.svg";
 import { ReactComponent as YouTubeIcon } from "./youtube-icon.svg";
 import { ReactComponent as TwitterIcon } from "./twitter-icon.svg";
 
-import RadialGradient from "../../RadialGradient/RadialGradient";
+import Gradient from "../../RadialGradient/Gradient";
 
 function Community() {
     return (
         <div className="text-container community-container">
-            <RadialGradient />
+            <Gradient className="linear-right"/>
             <div className="relative">
                 <div className="header-text">
                     Community

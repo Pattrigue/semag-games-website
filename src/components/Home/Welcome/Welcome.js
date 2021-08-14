@@ -1,11 +1,11 @@
 import React from "react";
 
-import RadialGradient from "../../RadialGradient/RadialGradient";
+import Gradient from "../../RadialGradient/Gradient";
 
 function Welcome() {
     return (
         <div className="relative container text-container">
-            <RadialGradient />
+            <Gradient />
             <div className="relative">
                 <div className="header-text welcome-text">
                     Welcome
