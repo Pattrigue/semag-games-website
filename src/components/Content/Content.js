@@ -8,16 +8,15 @@ function Content() {
     return (
         <div className="Content">
             <Welcome/>
-            <VibrantVenture/>
-            <Community/>
             <PageItem
-                align="right"
-                height="500px"
+                className="VibrantVenture"
+                align="left"
+                height="450px"
                 backgroundImage="/vibrant-venture-main.png"
-                backgroundPosition="0%"
             >
-                arstarst
+                <VibrantVenture/>
             </PageItem>
+            <Community/>
         </div>
     );
 }

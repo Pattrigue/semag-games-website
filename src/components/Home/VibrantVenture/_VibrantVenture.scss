@@ -1,33 +1,8 @@
-// VIBRANT VENTURE \\
-.VibrantVenture {
-  height: 550px;
-  border-bottom: 1px solid white;
-
-  justify-content: center;
-
-  @include md {
-    justify-content: left;
-  }
-}
-
 .VibrantVenture.main-container {
   background-position: 75% 0%;
 
   @include md {
     background-position: 0%;
-  }
-}
-
-.VibrantVenture .vibrant-venture-container {
-  padding: 0px 10px 0px 10px;
-
-  text-align: center;
-
-  @include md {
-    padding-left: 6em;
-    padding-right: 0;
-
-    text-align: left;
   }
 }
 
