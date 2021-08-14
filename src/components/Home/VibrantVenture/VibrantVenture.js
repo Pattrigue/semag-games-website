@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import Gradient from "../../RadialGradient/Gradient";
+import Gradient from "../../Gradient/Gradient";
 
 function VibrantVenture() {
     return (
