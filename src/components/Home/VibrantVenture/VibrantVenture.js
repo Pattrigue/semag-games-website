@@ -1,4 +1,5 @@
 import React from "react";
+import PageItem from "../../PageItem/PageItem.js";
 import {Link} from "react-router-dom";
 
 import RadialGradient from "../../RadialGradient/RadialGradient";
@@ -19,7 +20,7 @@ function VibrantVenture() {
                         Vibrant Venture is a singleplayer 2D adventure <br/>
                         platformer game featuring a quirky cast of characters! <br/> <br/>
                         The game features four playable characters with <br/>
-                        ultiple unique abilities that can be combined for <br/>
+                        multiple unique abilities that can be combined for <br/>
                         extremely versatile, fluid and fun movement!
                     </div>
                     <div className="button-group">

@@ -1,0 +1,30 @@
+.main-container {
+  padding: 50px 50px;
+
+  @include md {
+    padding: 100px 100px;
+  }
+}
+
+.main-container.left {
+  justify-content: center;
+
+  @include md {
+    justify-content: left;
+  }
+}
+
+.main-container.center {
+  text-align: center;
+  justify-content: center;
+}
+
+.main-container.right {
+  text-align: center;
+  justify-content: center;
+
+  @include md {
+    text-align: left;
+    justify-content: flex-end;
+  }
+}
