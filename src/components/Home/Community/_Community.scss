@@ -1,26 +1,8 @@
-// COMMUNITY \\
-.Community {
-  min-height: 550px;
-  border-bottom: 1px solid white;
-  text-align: center;
-  justify-content: center;
-  padding: 50px 0;
-
-  @include md {
-    text-align: left;
-    justify-content: flex-end;
-
-    padding: 100px 0;
-  }
-}
-
 .Community.main-container {
   background-position: 10% 0%;
 
   @include md {
     background-position: 0%;
-    padding-right: 6em;
-    align-self: end;
   }
 }
 
