@@ -20,13 +20,23 @@ code {
 .App {
   display: flex;
   justify-content: center;
+
+  @include max-w {
+    background-image: linear-gradient(to right, rgb(40, 40, 40), black, rgb(40, 40, 40));
+  }
 }
 
 .page {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 1920px;
+  width: 100%;
+  max-width: $max-width;
   min-height: 100vh;
   overflow-x: hidden; // This caused the wierdass small width on mobile.
+
+  @include max-w {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+  }
 }

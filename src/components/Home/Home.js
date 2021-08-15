@@ -12,7 +12,6 @@ function Home() {
                 align="center"
                 height="450px"
                 backgroundImage="/vibrant-venture-banner.png"
-                borderTop="1"
             >
                 <Welcome/>
             </PageItem>

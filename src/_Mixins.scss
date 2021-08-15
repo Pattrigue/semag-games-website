@@ -32,3 +32,10 @@
 			@content;
 	}
 }
+
+// Max width
+@mixin max-w {
+	@media (min-width: $max-width) {
+		@content
+	}
+}

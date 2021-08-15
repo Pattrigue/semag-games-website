@@ -11,7 +11,6 @@ function About() {
                 align="center"
                 height="550px"
                 backgroundImage="/town.png"
-                borderTop="1"
             >
                 <TheTeam/>
             </PageItem>
