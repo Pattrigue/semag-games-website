@@ -11,7 +11,7 @@ function About() {
                 className="About"
                 align="center"
                 height="550px"
-                backgroundImage="/town.png"
+                backgroundImage="2-Boss.png"
             >
                 <TheTeam/>
             </PageItem>
@@ -19,7 +19,7 @@ function About() {
                 className="Pattrigue"
                 align="center"
                 height="550px"
-                backgroundImage="/town.png"
+                backgroundImage="vv-island.png"
                 borderTop="1"
                 borderBottom="1"
             >
@@ -35,7 +35,7 @@ function About() {
                 className="Jurl"
                 align="center"
                 height="250px"
-                backgroundImage="/town.png"
+                backgroundImage="2-2.png"
                 borderTop="1"
                 borderBottom="1"
             >
@@ -52,7 +52,7 @@ function About() {
                 className="StaffMembersSmall"
                 align="center"
                 height="250px"
-                backgroundImage="/town.png"
+                backgroundImage="2-4.png"
                 borderTop="1"
                 borderBottom="1"
             >
