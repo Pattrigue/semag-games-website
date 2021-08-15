@@ -1,9 +1,10 @@
 .staff-container {
   display: grid;
   align-items: center;
-  text-align: left;
+  text-align: center;
 
   @include md {
+    text-align: left;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -54,4 +55,9 @@
   @include md {
     grid-column-start: 1;
   }
+}
+
+.staff-member-name-text {
+  font-weight: bold;
+  font-size: calc(1em + 4px);
 }

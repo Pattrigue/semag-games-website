@@ -24,7 +24,7 @@ function About() {
                 borderBottom="1"
             >
                 <StaffMember icon="semag-logo.png" align="left">
-                    Pattrigue is the owner of Semag Games and lead developer of our game Vibrant Venture. <br/> <br/>
+                    <span className="staff-member-name-text">Pattrigue</span> is the owner of Semag Games and lead developer of our game Vibrant Venture. <br/> <br/>
                     His responsibilities are programming, designing, creating sound effects, planning... <br/>
                     basically everything that isn't drawing. <br/><br/>
                     He studies software engineering at university
@@ -40,7 +40,7 @@ function About() {
                 borderBottom="1"
             >
                 <StaffMember icon="semag-logo.png" align="right">
-                    Jurl is the artist at Semag Games.<br/><br/>
+                    <span className="staff-member-name-text">Jurl</span> is the artist at Semag Games.<br/><br/>
                     He does all the really cool pixel graphics for Vibrant Venture!<br/>
                     But not only that, he also creates sick HD promotional art!<br/><br/>
                     Jurl began working on digital art back in 2013
