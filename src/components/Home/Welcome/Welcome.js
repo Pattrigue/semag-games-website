@@ -4,7 +4,7 @@ import Gradient from "../../Gradient/Gradient";
 
 function Welcome() {
     return (
-        <div className="text-container">
+        <div className="Welcome">
             <Gradient />
             <div className="relative">
                 <div className="header-text welcome-text">
