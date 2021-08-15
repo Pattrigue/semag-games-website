@@ -1,6 +1,7 @@
 .staff-container {
   display: grid;
   align-items: center;
+  max-width: 2000px;
 
   @include md {
     grid-template-columns: repeat(2, 1fr);

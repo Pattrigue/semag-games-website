@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,11 +17,16 @@ code {
   position: relative;
 }
 
+.App {
+  display: flex;
+  justify-content: center;
+}
+
 .page {
-	position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 1920px;
   min-height: 100vh;
-	overflow-x: hidden; // This caused the wierdass small width on mobile.
+  overflow-x: hidden; // This caused the wierdass small width on mobile.
 }

@@ -17,7 +17,7 @@ function About() {
             </PageItem>
             <PageItem
                 className="Pattrigue"
-                align="left"
+                align="center"
                 height="550px"
                 backgroundImage="/town.png"
                 borderTop="1"
@@ -33,7 +33,7 @@ function About() {
             </PageItem>
             <PageItem
                 className="Jurl"
-                align="right"
+                align="center"
                 height="250px"
                 backgroundImage="/town.png"
                 borderTop="1"
