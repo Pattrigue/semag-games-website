@@ -1,6 +1,7 @@
 import React from "react";
-import PageItem from "../PageItem/PageItem";
-import TheTeam from "./TheTeam/TheTeam";
+import PageItem from "../PageItem/PageItem.js";
+import TheTeam from "./TheTeam/TheTeam.js";
+import Pattrigue from "./Pattrigue/Pattrigue.js";
 
 function About() {
     return (
@@ -11,9 +12,18 @@ function About() {
                 height="550px"
                 backgroundImage="/town.png"
                 borderTop="1"
-                borderBottom="1"
             >
                 <TheTeam/>
+            </PageItem>
+            <PageItem
+                className="Pattrigue"
+                align="left"
+                height="250px"
+                backgroundImage="/town.png"
+                borderTop="1"
+                borderBottom="1"
+            >
+                <Pattrigue/>
             </PageItem>
         </div>
     );
