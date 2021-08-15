@@ -7,14 +7,6 @@
   }
 }
 
-.staff-text {
-  grid-row-start: 2;
-
-  @include md {
-    grid-row-start: 1;
-  }
-}
-
 .staff-icon-container {
   text-align: center;
   align-content: center;
@@ -27,15 +19,38 @@
 }
 
 .staff-icon {
-  grid-row-start: 1;
   width: 200px;
   height: 200px;
   position: relative;
 
   @include md {
-    grid-row-start: 2;
     position: relative;
     width: 400px;
     height: 400px;
+  }
+}
+
+.staff-text {
+  grid-row-start: 2;
+
+  @include md {
+    grid-row-start: 1;
+  }
+}
+
+.staff-icon-container {
+  grid-row-start: 1;
+
+  @include md {
+    grid-row-start: 1;
+  }
+}
+
+
+.staff-icon-container.right {
+  grid-column-start: 1;
+
+  @include md {
+    grid-column-start: 1;
   }
 }
