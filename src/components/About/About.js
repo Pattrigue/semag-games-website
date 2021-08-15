@@ -2,6 +2,7 @@ import React from "react";
 import PageItem from "../PageItem/PageItem.js";
 import TheTeam from "./TheTeam/TheTeam.js";
 import StaffMember from "./StaffMember/StaffMember.js";
+import StaffMemberSmallList from "./StaffMemberSmallList/StaffMemberSmallList";
 
 function About() {
     return (
@@ -46,6 +47,16 @@ function About() {
                     and is constantly improving in both pixel art, free-form art, 3D modelling
                     and all sorts of other visually pleasing things!
                 </StaffMember>
+            </PageItem>
+            <PageItem
+                className="StaffMembersSmall"
+                align="center"
+                height="250px"
+                backgroundImage="/town.png"
+                borderTop="1"
+                borderBottom="1"
+            >
+                <StaffMemberSmallList/>
             </PageItem>
         </div>
     );
