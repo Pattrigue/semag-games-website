@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import { ReactComponent as DiscordIcon } from "./discord-icon.svg";
 import { ReactComponent as YouTubeIcon } from "./youtube-icon.svg";
 import { ReactComponent as TwitterIcon } from "./twitter-icon.svg";
