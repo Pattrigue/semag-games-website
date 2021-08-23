@@ -12,18 +12,30 @@ function Header() {
 						</div>
 				</div>
 				<div className="nav-bar">
-						<NavLink
-								className="nav-link"
-								activeClassName="nav-link-active"
-								exact to="/">Home</NavLink>
-						<NavLink
-								className="nav-link"
-								activeClassName="nav-link-active"
-								to="/about">About</NavLink>
-						<NavLink
-								className="nav-link"
-								activeClassName="nav-link-active"
-								to="/vibrant-venture">Vibrant Venture</NavLink>
+					<NavLink
+						className="nav-link"
+						activeClassName="nav-link-active"
+						exact to="/">
+						<div className="nav-link-container">
+							Home
+						</div>
+					</NavLink>
+					<NavLink
+						className="nav-link"
+						activeClassName="nav-link-active"
+						to="/about">
+						<div className="nav-link-container">
+							About
+						</div>
+					</NavLink>
+					<NavLink
+						className="nav-link"
+						activeClassName="nav-link-active"
+						to="/vibrant-venture">
+						<div className="nav-link-container">
+							Vibrant Venture
+						</div>
+					</NavLink>
 				</div>
 		</div>
     )
