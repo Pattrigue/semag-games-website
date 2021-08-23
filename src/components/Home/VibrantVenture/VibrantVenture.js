@@ -26,7 +26,7 @@ function VibrantVenture() {
                     <a
                         href="https://store.steampowered.com/app/1264520/Vibrant_Venture/"
                         target="_blank"
-                        className="buy-now-link"
+                        className="text-link buy-now-link"
                         rel="noreferrer"
                     >
                             Buy Now

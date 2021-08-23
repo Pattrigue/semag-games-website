@@ -39,3 +39,17 @@ code {
     border-bottom: 3px solid white;
   }
 }
+
+.text-link {
+  color: white;
+  font-style: italic;
+  display: inline;
+}
+
+.text-link:hover {
+  color: #97dcf5;
+}
+
+.text-link:active {
+  color: #50c8ff;
+}
