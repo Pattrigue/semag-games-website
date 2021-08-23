@@ -18,34 +18,41 @@ function Community() {
                     We care a lot about our players. <br/>
                     Have any feedback, ideas or maybe you just want to talk to us?
                 </div>
-                <Link to={{ pathname: "https://discord.gg/semag-games" }}
+                <a
+                    href="https://discord.gg/semag-games"
                     target="_blank"
                     style={{ textDecoration: 'none' }}
-                    className={`btn discord-btn`}>
+                    className={`btn discord-btn`}
+                    rel="noreferrer"
+                >
                     <DiscordIcon className="btn-icon"/>
                     Join the Community
-                </Link>
+                </a>
                 <div className="youtube-twitter-text">
                     You can find devlogs and content related to Vibrant Venture and our projects on YouTube. <br/>
                     We also post important news on Twitter.
                 </div>
                 <div className="social-media-btns">
-                    <Link
-                        to={{ pathname: "https://www.youtube.com/c/SemagGames" }}
+                    <a
+                        href="https://www.youtube.com/c/SemagGames"
                         target="_blank"
                         style={{ textDecoration: 'none' }}
-                        className="btn youtube-btn">
+                        className="btn youtube-btn"
+                        rel="noreferrer"
+                    >
                         <YouTubeIcon className="btn-icon"/>
                         YouTube
-                    </Link>
-                    <Link
-                        to={{ pathname: "https://twitter.com/pattrigue" }}
+                    </a>
+                    <a
+                        href="https://twitter.com/pattrigue"
                         target="_blank"
                         style={{ textDecoration: 'none' }}
-                        className="btn twitter-btn">
+                        className="btn twitter-btn"
+                        rel="noreferrer"
+                    >
                         <TwitterIcon className="btn-icon"/>
                         Twitter
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>

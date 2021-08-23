@@ -19,9 +19,18 @@ function VibrantVenture() {
                     extremely versatile, fluid and fun movement!
                 </div>
                 <div className="button-group">
-                    <button className="learn-more-btn">Learn More</button>
+                    <Link to="/vibrant-venture">
+                        <button className="learn-more-btn">Learn More</button>
+                    </Link>
                     <span className="or">or</span>
-                    <Link className="buy-now-link">Buy Now</Link>
+                    <a
+                        href="https://store.steampowered.com/app/1264520/Vibrant_Venture/"
+                        target="_blank"
+                        className="buy-now-link"
+                        rel="noreferrer"
+                    >
+                            Buy Now
+                    </a>
                 </div>
             </div>
         </div>
