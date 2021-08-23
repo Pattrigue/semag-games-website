@@ -17,7 +17,13 @@ function TheTeam() {
                         We still want to make more games after finishing Vibrant Venture, <br/>
                         however this is not a full-time job for any of us. <br/><br/>
                         We have jobs and studies to attend, so if you want to support us, <br/>
-                        please consider picking up our game on Steam, <br/>
+                        <a
+                            href="https://store.steampowered.com/app/1264520/Vibrant_Venture/"
+                            target="_blank"
+                            className="text-link"
+                        >
+                            please consider picking up our game on Steam
+                        </a>, <br/>
                         dropping a review and sharing it with your friends - thanks! <br/>
                     </div>
                 </div>
