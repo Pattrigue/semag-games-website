@@ -16,25 +16,19 @@ function Header() {
 						className="nav-link"
 						activeClassName="nav-link-active"
 						exact to="/">
-						<div className="nav-link-container">
-							Home
-						</div>
+						Home
 					</NavLink>
 					<NavLink
 						className="nav-link"
 						activeClassName="nav-link-active"
 						to="/about">
-						<div className="nav-link-container">
-							About
-						</div>
+						About
 					</NavLink>
 					<NavLink
 						className="nav-link"
 						activeClassName="nav-link-active"
 						to="/vibrant-venture">
-						<div className="nav-link-container">
-							Vibrant Venture
-						</div>
+						Vibrant Venture
 					</NavLink>
 				</div>
 		</div>
