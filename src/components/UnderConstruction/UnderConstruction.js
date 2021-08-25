@@ -18,7 +18,11 @@ function UnderConstruction() {
                 <div>
                     Please check back later!
                 </div>
-                <img src={`${process.env.PUBLIC_URL}azura-flushed.png`} className="azura"/>
+                <img
+                    src={`${process.env.PUBLIC_URL}azura-flushed.png`}
+                    className="azura"
+                    alt=""
+                />
             </div>
         </PageItem>
     );

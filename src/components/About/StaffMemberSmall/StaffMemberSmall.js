@@ -5,7 +5,11 @@ function StaffMemberSmall({ children, icon }) {
         <div>
             <div className="staff-member-small relative">
                 <div>
-                    <img className="staff-icon" src={`${process.env.PUBLIC_URL}${icon}`}/>
+                    <img
+                        src={`${process.env.PUBLIC_URL}${icon}`}
+                        className="staff-icon"
+                        alt=""
+                    />
                 </div>
                 <div>
                     {children}
