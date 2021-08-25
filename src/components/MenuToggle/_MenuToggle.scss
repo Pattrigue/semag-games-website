@@ -37,6 +37,7 @@
 				height: 0.35rem;
 		
 				background-color: white;
+				transition: transform 0.25s ease;
 			}
 		}
 	}
@@ -60,7 +61,8 @@
 		}
 
 		.bar.two {
-			display: none;
+			transform: translateX(-100%) translateY(-50%);
+			top: 50%;
 		}
 
 		.bar.three {

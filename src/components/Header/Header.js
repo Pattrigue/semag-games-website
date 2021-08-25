@@ -1,5 +1,7 @@
 import React, {
-	useState
+	useState,
+	useEffect,
+	useRef,
 } from "react";
 import { NavLink } from "react-router-dom"
 
@@ -7,13 +9,26 @@ import NavToggle from "../MenuToggle/MenuToggle";
 
 function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const navBar = useRef(null);
 
 	function onNavLinkClicked() {
 		setMenuOpen(false);
 	}
 
+	useEffect(() => {
+		if (menuOpen) {
+			navBar.current.classList.remove('open'); // Due to the states it's safe to first remove any duplicates.
+			navBar.current.classList.add('open');
+		} else {
+			navBar.current.classList.remove('open');
+		}
+	}, [menuOpen])
+
 	return (
 		<div className="Header">
+			{/** Background. */}
+			<div className={`header-bg`} />
+
 			{/** Nav Toggle. */}
 			<NavToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
@@ -27,7 +42,7 @@ function Header() {
 			</div>
 
 			{/** Nav Bar. */}
-			<div className={`nav-bar ${menuOpen ? 'open' : ''}`}>
+			<div ref={navBar} className={`nav-bar`}>
 				<NavLink
 					className="nav-link"
 					activeClassName="nav-link-active"

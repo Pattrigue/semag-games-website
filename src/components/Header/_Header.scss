@@ -13,8 +13,6 @@ $content-margin: 10px;
 	top: 0;
 	z-index: 10;
 	flex-direction: row;
-	background-color: $red;
-	border-bottom: solid 1px white;
 
 	justify-content: space-between;
 
@@ -25,8 +23,19 @@ $content-margin: 10px;
 	}
 }
 
+.Header .header-bg { // We do this to allow our mobile nav to move behind the background.
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: $red;
+	border-bottom: solid 1px white;
+}
+
 .Header .company-logo-container {
 	display: flex;
+	z-index: 1;
 	
 	justify-self: flex-end;
 
@@ -64,28 +73,31 @@ $content-margin: 10px;
 }
 
 .Header .nav-bar {
-	display: none;
+	display: flex;
 	position: absolute;
+	z-index: -1;
 
 	flex-direction: column;
 
 	width: 100%;
-	transform: translateY(0px);
+	transform: translateY(-100%);
 	background-color: $red;
 
-	transition: transform 1s ease;
+	transition: transform 0.25s ease;
 
 	@include md {
 		display: flex !important; // Overwrite the mobile one when on desktop so the menu isn't gone when you switch after closing it on mobile.
 		position: relative;
 		flex-direction: row;
 		align-items: center;
+		z-index: auto;
 
 		margin-left: auto;
 		margin-right: $content-margin;
 		font-size: 25px;
 		white-space: nowrap;
 		width: auto;
+		transform: translateY(0) !important;
 
 		background-color: transparent;
 	}
