@@ -18,7 +18,8 @@ function Header() {
 	}
 
 	function onDocumentClicked(e) {
-		if (e.target === navBar.current || e.target === hamburger.current || e.target === headerBg.current) return;
+		if (e.target === navBar.current || e.target === headerBg.current) return;
+		if (hamburger.current.contains(e.target)) return;
 
 		setMenuOpen(false);
 	}
