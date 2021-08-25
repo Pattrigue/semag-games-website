@@ -1,7 +1,7 @@
 import React, {
 	useState,
 	useEffect,
-	useRef,
+	useRef, useLayoutEffect,
 } from "react";
 import { NavLink } from "react-router-dom"
 
@@ -11,8 +11,15 @@ function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const navBar = useRef(null);
 	const hamburger = useRef(null);
+	const headerBg = useRef(null);
 
 	function onNavLinkClicked() {
+		setMenuOpen(false);
+	}
+
+	function onDocumentClicked(e) {
+		if (e.target === navBar.current || e.target === hamburger.current || e.target === headerBg.current) return;
+
 		setMenuOpen(false);
 	}
 
@@ -27,10 +34,14 @@ function Header() {
 		}
 	}, [menuOpen, navBar, hamburger]);
 
+	useLayoutEffect(() => {
+		document.addEventListener("mousedown", onDocumentClicked);
+	});
+
 	return (
 		<div className="Header">
 			{/** Background. */}
-			<div className={`header-bg`} />
+			<div className={`header-bg`} ref={headerBg} />
 
 			{/** Nav Toggle. */}
 			<MenuToggle
