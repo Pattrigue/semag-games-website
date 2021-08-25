@@ -17,10 +17,7 @@ function Header() {
 	}
 
 	useEffect(() => {
-		if (!navBar || !hamburger)
-			return;
-
-		console.log(navBar.current, hamburger.current);
+		if (!navBar || !hamburger) return;
 
 		if (menuOpen) {
 			navBar.current.classList.remove('open'); // Due to the states it's safe to first remove any duplicates.
