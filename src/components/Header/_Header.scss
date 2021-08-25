@@ -13,7 +13,7 @@ $content-margin: 10px;
 	top: 0;
 	z-index: 10;
 	flex-direction: row;
-	background-color: rgb(192, 45, 26);
+	background-color: $red;
 	border-bottom: solid 1px white;
 
 	justify-content: space-between;
@@ -22,78 +22,6 @@ $content-margin: 10px;
 		height: $header-height-md;
 
 		justify-content: start;
-	}
-}
-
-.menu-toggle {
-	display: block;
-	position: relative;
-
-	width: $header-height-base; // Hackerman.
-	height: $header-height-base;
-	box-sizing: border-box;
-	padding: 0.75rem;
-
-	@include md {
-		display: none;
-	}
-	
-	// The Sass way of writing "css". (great for components like these!)
-	.bars-outer {
-		display: block;
-		position: relative; // Wrap the bars in a relative element so the absolute element knows to take dimensions from this element.
-
-		width: 100%;
-		height: 100%;
-
-		.bars-inner {
-			display: flex;
-			position: absolute;
-
-			flex-direction: column;
-			justify-content: space-around;
-
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-
-			.bar {
-				position: relative;
-		
-				width: 100%;
-				height: 0.35rem;
-		
-				background-color: white;
-			}
-		}
-	}
-}
-
-.menu-toggle.open {
-	padding: 1rem;
-
-	.bars-inner {
-		display: block;
-
-		.bar {
-			position: absolute;
-
-			width: 200%;
-		}
-
-		.bar.one {
-			transform: translateY(-50%) rotate(45deg);
-			transform-origin: left;
-		}
-
-		.bar.two {
-			display: none;
-		}
-
-		.bar.three {
-			transform: translateY(-50%) translateX(-50%) rotate(-45deg);
-			transform-origin: right;
-		}
 	}
 }
 
@@ -143,7 +71,7 @@ $content-margin: 10px;
 
 	width: 100%;
 	transform: translateY(0px);
-	background-color: rgb(187, 0, 0);
+	background-color: $red;
 
 	transition: transform 1s ease;
 
@@ -177,10 +105,10 @@ $content-margin: 10px;
 	font-weight: bold;
 	text-decoration: none;
 
-	padding: 1.5rem;
+	padding: 1rem;
 	margin-top: 1px;
 
-	background-color: rgb(117, 0, 0);
+	background-color: rgb(156, 0, 0);
 	
 	@include md {
 		text-align: center;
@@ -200,7 +128,7 @@ $content-margin: 10px;
 
 .Header .nav-link-active {
 	color: $white;
-	background-color: red;
+	background-color: rgba(0, 0, 0, 0.5);
 
 	@include md {
 		background-color: rgba(0, 0, 0, 0.5) !important;;
@@ -210,12 +138,14 @@ $content-margin: 10px;
 }
 
 .Header .nav-link:hover {
-	background-color: rgba(0, 0, 0, 0.25);
-	border: 3px rgba(0, 0, 0, 0.35);
-	border-radius: 20px;
-	color: $white;
+	@include md {
+		background-color: rgba(0, 0, 0, 0.25);
+		border: 3px rgba(0, 0, 0, 0.35);
+		border-radius: 20px;
+		color: $white;
 
-	-webkit-transition: background-color 100ms linear, border-radius 100ms linear, color 100ms linear;
-	-ms-transition: background-color 100ms linear, border-radius 100ms linear, color 100ms linear;
-	transition: background-color 100ms linear, border-radius 100ms linear, color 100ms linear;
+		-webkit-transition: background-color 100ms linear, border-radius 100ms linear, color 100ms linear;
+		-ms-transition: background-color 100ms linear, border-radius 100ms linear, color 100ms linear;
+		transition: background-color 100ms linear, border-radius 100ms linear, color 100ms linear;
+	}
 }

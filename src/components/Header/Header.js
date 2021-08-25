@@ -3,28 +3,19 @@ import React, {
 } from "react";
 import { NavLink } from "react-router-dom"
 
+import NavToggle from "../MenuToggle/MenuToggle";
+
 function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 
-	function onMenuToggleClicked() {
-		setMenuOpen(!menuOpen)
+	function onNavLinkClicked() {
+		setMenuOpen(false);
 	}
 
-    return (
+	return (
 		<div className="Header">
 			{/** Nav Toggle. */}
-			<div
-				onClick={onMenuToggleClicked}
-				className={`menu-toggle ${menuOpen ? 'open' : ''}`}
-			>
-				<div className={`bars-outer`}>
-					<div className={`bars-inner`}>
-						<div className="bar one" ></div>
-						<div className="bar two" ></div>
-						<div className="bar three" ></div>
-					</div>
-				</div>
-			</div>
+			<NavToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
 			{/** Logo Container. */}
 			<div className="company-logo-container">
@@ -40,24 +31,27 @@ function Header() {
 				<NavLink
 					className="nav-link"
 					activeClassName="nav-link-active"
+					onClick={onNavLinkClicked}
 					exact to="/">
 					Home
 				</NavLink>
 				<NavLink
 					className="nav-link"
 					activeClassName="nav-link-active"
+					onClick={onNavLinkClicked}
 					to="/about">
 					About
 				</NavLink>
 				<NavLink
 					className="nav-link"
 					activeClassName="nav-link-active"
+					onClick={onNavLinkClicked}
 					to="/vibrant-venture">
 					Vibrant Venture
 				</NavLink>
 			</div>
 		</div>
-    )
+	)
 }
 
 export default Header
