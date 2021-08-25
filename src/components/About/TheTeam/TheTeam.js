@@ -21,6 +21,7 @@ function TheTeam() {
                             href="https://store.steampowered.com/app/1264520/Vibrant_Venture/"
                             target="_blank"
                             className="text-link"
+                            rel="noreferrer"
                         >
                             please consider picking up our game on Steam
                         </a>, <br/>

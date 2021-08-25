@@ -12,7 +12,11 @@ function StaffMember({ children, icon, align }) {
                             {children}
                         </div>
                         <div className={`staff-icon-container ${align}`}>
-                            <img className="staff-icon" src={`${process.env.PUBLIC_URL}${icon}`}/>
+                            <img
+                                src={`${process.env.PUBLIC_URL}${icon}`}
+                                className="staff-icon"
+                                alt=""
+                            />
                         </div>
                     </div>
                 </div>
