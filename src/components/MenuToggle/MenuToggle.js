@@ -1,27 +1,28 @@
 import React, {
-	useRef,
 	useEffect,
+	forwardRef,
 } from "react";
 
-function MenuToggle({ menuOpen, setMenuOpen }) {
-	const hamburger = useRef(null);
-
+function MenuToggle({ menuOpen, setMenuOpen, hamburgerRef }) {
 	function onMenuToggleClicked() {
 		setMenuOpen(!menuOpen)
 	}
 
 	useEffect(() => {
+		if (!hamburgerRef)
+			return;
+
 		if (menuOpen) {
-			hamburger.current.classList.remove('open'); // Due to the states it's safe to first remove any duplicates.
-			hamburger.current.classList.add('open');
+			hamburgerRef.current.classList.remove('open'); // Due to the states it's safe to first remove any duplicates.
+			hamburgerRef.current.classList.add('open');
 		} else {
-			hamburger.current.classList.remove('open');
+			hamburgerRef.current.classList.remove('open');
 		}
-	}, [menuOpen])
+	}, [menuOpen, hamburgerRef])
 
 	return (
 		<div
-			ref={hamburger}
+			ref={hamburgerRef}
 			onClick={onMenuToggleClicked}
 			className={`menu-toggle`}
 		>

@@ -10,19 +10,25 @@ import MenuToggle from "../MenuToggle/MenuToggle";
 function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const navBar = useRef(null);
+	const hamburger = useRef(null);
 
 	function onNavLinkClicked() {
 		setMenuOpen(false);
 	}
 
 	useEffect(() => {
+		if (!navBar || !hamburger)
+			return;
+
+		console.log(navBar.current, hamburger.current);
+
 		if (menuOpen) {
 			navBar.current.classList.remove('open'); // Due to the states it's safe to first remove any duplicates.
 			navBar.current.classList.add('open');
 		} else {
 			navBar.current.classList.remove('open');
 		}
-	}, [menuOpen])
+	}, [menuOpen, navBar, hamburger]);
 
 	return (
 		<div className="Header">
@@ -30,7 +36,11 @@ function Header() {
 			<div className={`header-bg`} />
 
 			{/** Nav Toggle. */}
-			<MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+			<MenuToggle
+				menuOpen={menuOpen}
+				setMenuOpen={setMenuOpen}
+				hamburgerRef={hamburger}
+			/>
 
 			{/** Logo Container. */}
 			<div className="company-logo-container">
