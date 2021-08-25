@@ -82,6 +82,7 @@ $content-margin: 10px;
 	width: 100%;
 	transform: translateY(-100%);
 	background-color: $red;
+	-webkit-tap-highlight-color: transparent;
 
 	transition: transform 0.25s ease;
 
