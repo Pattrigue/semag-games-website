@@ -5,7 +5,7 @@ import React, {
 } from "react";
 import { NavLink } from "react-router-dom"
 
-import NavToggle from "../MenuToggle/MenuToggle";
+import MenuToggle from "../MenuToggle/MenuToggle";
 
 function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ function Header() {
 			<div className={`header-bg`} />
 
 			{/** Nav Toggle. */}
-			<NavToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+			<MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
 			{/** Logo Container. */}
 			<div className="company-logo-container">

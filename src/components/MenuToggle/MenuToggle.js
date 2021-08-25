@@ -3,7 +3,7 @@ import React, {
 	useEffect,
 } from "react";
 
-function NavToggle({ menuOpen, setMenuOpen }) {
+function MenuToggle({ menuOpen, setMenuOpen }) {
 	const hamburger = useRef(null);
 
 	function onMenuToggleClicked() {
@@ -36,4 +36,4 @@ function NavToggle({ menuOpen, setMenuOpen }) {
 	)
 }
 
-export default NavToggle;
+export default MenuToggle;
