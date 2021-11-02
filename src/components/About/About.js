@@ -23,7 +23,7 @@ function About() {
                 borderTop="1"
                 borderBottom="1"
             >
-                <StaffMember icon="semag-logo.png" align="left">
+                <StaffMember icon="portrait-patrick.png" align="left">
                     <span className="staff-member-name-text">Pattrigue</span> is the owner of Semag Games and lead developer of our game Vibrant Venture. <br/> <br/>
                     His responsibilities are programming, designing, creating sound effects, planning... <br/>
                     basically everything that isn't drawing. <br/><br/>
@@ -39,7 +39,7 @@ function About() {
                 borderTop="1"
                 borderBottom="1"
             >
-                <StaffMember icon="semag-logo.png" align="right">
+                <StaffMember icon="portrait-jurl.png" align="right">
                     <span className="staff-member-name-text">Jurl</span> is the artist at Semag Games.<br/><br/>
                     He does all the really cool pixel graphics for Vibrant Venture!<br/>
                     But not only that, he also creates sick HD promotional art!<br/><br/>
@@ -49,14 +49,26 @@ function About() {
                 </StaffMember>
             </PageItem>
             <PageItem
-                className="StaffMembersSmall"
+                className="Pattrigue"
                 align="center"
-                height="250px"
+                height="550px"
                 backgroundImage="2-4.png"
                 borderTop="1"
                 borderBottom="1"
             >
-                <StaffMemberSmallList/>
+                <StaffMember icon="portrait-christoph.png" align="left">
+                    The music in Vibrant Venture is composed by <span className="staff-member-name-text"> Christoph Jakob</span>, <br/>
+                    a freelance composer. <br/><br/>
+                    Taking inspiration from several video game franchises like Mario and Kirby, <br/>
+                    he is carefully crafting the quirky soundtrack.
+                </StaffMember>
+                <div className="testers-text relative">
+                    Besides the previously listed members,
+                    we have a group of friends who <br/> voluntarily test the game in order to minimize
+                    the amount of bugs and issues present within. <br/><br/>
+                    If not for their commitment to testing and finding bugs,
+                    Vibrant Venture would be really, really buggy!
+                </div>
             </PageItem>
         </div>
     );
