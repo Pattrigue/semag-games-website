@@ -58,9 +58,9 @@ function About() {
             >
                 <StaffMember icon="portrait-christoph.png" align="left">
                     The music in Vibrant Venture is composed by <span className="staff-member-name-text"> Christoph Jakob</span>, <br/>
-                    a professional German freelance compose. <br/><br/>
-                    Christoph grew up playing mainly Nintendo games like Super Mario World or Paper Mario.<br/>
-                    Taking inspiration from classic video game composers such as David Wise and Yoko Shimomura, <br/>
+                    a professional German freelance composer. <br/><br/>
+                    Christoph grew up playing mainly Nintendo games like Super Mario World and Paper Mario.<br/><br/>
+                    Taking inspiration from classic video game composers such as David Wise and Yoko Shimomura,
                     he is carefully crafting the quirky soundtrack.
                 </StaffMember>
                 <div className="testers-text relative">
