@@ -14,7 +14,7 @@ function Footer() {
             </div>
 
             <div className="developers-text">
-                Created by Pattrigue {`&`} Rico
+                Created by Pattrigue {'&'} <a href="https://www.ricosoftworks.com/" class="text-link rico" target="_blank">Rico</a>
             </div>
         </div>
     );
