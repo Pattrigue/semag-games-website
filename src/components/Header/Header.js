@@ -4,6 +4,7 @@ import React, {
 	useRef, useLayoutEffect,
 } from "react";
 import { NavLink } from "react-router-dom"
+import ExternalNavLink from "../ExternalNavLink";
 
 import MenuToggle from "../MenuToggle/MenuToggle";
 
@@ -14,6 +15,9 @@ function Header() {
 	const headerBg = useRef(null);
 
 	function onNavLinkClicked() {
+		// reset the scroll position to the top of the page.
+		window.scrollTo(0, 0);
+		console.log("onNavLinkClicked");
 		setMenuOpen(false);
 	}
 
@@ -76,13 +80,12 @@ function Header() {
 					to="/about">
 					About
 				</NavLink>
-				<NavLink
+				<ExternalNavLink
 					className="nav-link"
 					activeClassName="nav-link-active"
-					onClick={onNavLinkClicked}
-					to="/vibrant-venture">
+					to="https://store.steampowered.com/app/1264520/Vibrant_Venture/">
 					Vibrant Venture
-				</NavLink>
+				</ExternalNavLink>
 			</div>
 		</div>
 	)
