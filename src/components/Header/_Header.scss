@@ -78,6 +78,9 @@ $content-margin: 10px;
 	z-index: -1;
 
 	flex-direction: column;
+	// rounded corners
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 
 	width: 100%;
 	transform: translateY(-100%);
@@ -106,12 +109,11 @@ $content-margin: 10px;
 
 .Header .nav-bar.open {
 	display: flex;
-
 	transform: translateY($header-height-base);
 }
 
 .Header .nav-link {
-	text-align: center;
+	text-align: left;
 	flex-grow: 1;
 	display: inline-block;
 	color: $white-transparent;
@@ -119,13 +121,11 @@ $content-margin: 10px;
 	text-decoration: none;
 
 	padding: 1rem;
-	margin-right: 10px;
-	margin-left: 10px;
 	margin-top: 1px;
 	background-color: rgb(156, 0, 0);
 
 	@include md {
-		text-align: center;
+		text-align: left;
 		flex-grow: 1;
 		display: inline-block;
 		padding: 0.5em 1em;
@@ -133,6 +133,8 @@ $content-margin: 10px;
 		font-weight: bold;
 		text-decoration: none;
 		padding: 1rem;
+		margin-right: 10px;
+		margin-left: 10px;
 		margin-top: 0;
 
 		background-color: transparent;
