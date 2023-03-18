@@ -3,10 +3,11 @@ import React, {
 	useEffect,
 	useRef, useLayoutEffect,
 } from "react";
-import { NavLink } from "react-router-dom"
+import {NavLink} from "react-router-dom"
 import ExternalNavLink from "../ExternalNavLink";
-
 import MenuToggle from "../MenuToggle/MenuToggle";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faHome, faInfoCircle, faGamepad} from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -15,9 +16,7 @@ function Header() {
 	const headerBg = useRef(null);
 
 	function onNavLinkClicked() {
-		// reset the scroll position to the top of the page.
 		window.scrollTo(0, 0);
-		console.log("onNavLinkClicked");
 		setMenuOpen(false);
 	}
 
@@ -57,11 +56,8 @@ function Header() {
 
 			{/** Logo Container. */}
 			<div className="company-logo-container">
-				<img src={`/${process.env.PUBLIC_URL}semag-logo.png`}
-					alt=""/>
-				<div className="company-name">
-					SEMAG GAMES
-				</div>
+				<img src={`/${process.env.PUBLIC_URL}semag-logo.png`} alt="" />
+				<div className="company-name">SEMAG GAMES</div>
 			</div>
 
 			{/** Nav Bar. */}
@@ -70,25 +66,38 @@ function Header() {
 					className="nav-link"
 					activeClassName="nav-link-active"
 					onClick={onNavLinkClicked}
-					exact to="/">
-					Home
+					exact
+					to="/"
+				>
+					<FontAwesomeIcon icon={faHome} className="nav-link-icon" />
+					<span className="nav-link-text">
+						Home
+					</span>
 				</NavLink>
 				<NavLink
 					className="nav-link"
 					activeClassName="nav-link-active"
 					onClick={onNavLinkClicked}
-					to="/about">
-					About
+					to="/about"
+				>
+					<FontAwesomeIcon icon={faInfoCircle} className="nav-link-icon" />
+					<span className="nav-link-text">
+						About
+					</span>
 				</NavLink>
 				<ExternalNavLink
 					className="nav-link"
 					activeClassName="nav-link-active"
-					to="https://store.steampowered.com/app/1264520/Vibrant_Venture/">
-					Vibrant Venture
+					to="https://store.steampowered.com/app/1264520/Vibrant_Venture/"
+				>
+					<FontAwesomeIcon icon={faGamepad} className="nav-link-icon" />
+					<span className="nav-link-text">
+						Vibrant Venture
+					</span>
 				</ExternalNavLink>
 			</div>
 		</div>
-	)
+	);
 }
 
 export default Header
