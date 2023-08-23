@@ -19,7 +19,7 @@ function Community() {
                         Have any feedback, ideas or maybe you just want to talk to us?
                     </div>
                     <a
-                        href="https://discord.gg/semag-games"
+                        href="http://discord.gg/SSUTPCU"
                         target="_blank"
                         style={{ textDecoration: 'none' }}
                         className={`btn discord-btn`}
