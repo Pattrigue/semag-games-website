@@ -30,10 +30,6 @@
   z-index: 1;
 }
 
-.eyebrow {
-  letter-spacing: 0.12em;
-}
-
 /* Crisp edge + lift on each slide against the dark background. */
 .slideInner {
   border-radius: var(--mantine-radius-md);

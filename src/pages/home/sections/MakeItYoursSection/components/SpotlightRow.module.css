@@ -1,0 +1,42 @@
+.image {
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  transition: transform 280ms ease;
+}
+
+/* Soft accent-colored glow behind each screenshot, tying it to the brand.
+   --accent is set per-row from the spotlight's Mantine color. */
+.imageWrap {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Static ambient color wash behind the screenshot. */
+.imageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 6%;
+  border-radius: var(--mantine-radius-lg);
+  background: var(--accent);
+  filter: blur(52px);
+  opacity: 0.32;
+  z-index: -1;
+}
+
+/* Accent glow ring around the screenshot. Lives on a pseudo-element so its
+   whole intensity can pulse via opacity (constant size — brightness fades in
+   and out, no scaling). */
+.imageWrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--mantine-radius-lg);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--accent) 45%, transparent),
+    0 0 38px 2px color-mix(in srgb, var(--accent) 85%, transparent);
+  z-index: -1;
+  animation: glowPulse 2.6s ease-in-out infinite;
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.04);
+}

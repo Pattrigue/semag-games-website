@@ -92,31 +92,6 @@
     0 14px 34px -8px rgba(236, 72, 153, 0.5);
 }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  /* Keep each pill's label on one line; the row's wrap is controlled by the
-     parent (wraps on mobile, single row on desktop). */
-  white-space: nowrap;
-  flex-shrink: 0;
-  border-radius: var(--mantine-radius-xl);
-  background-color: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  font-size: var(--mantine-font-size-sm);
-  font-weight: 600;
-  color: var(--mantine-color-dark-6);
-  transition:
-    background-color 150ms ease,
-    transform 150ms ease;
-}
-
-.pill:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-}
-
 /* Glowing CTA that lifts on hover. */
 .playButton {
   box-shadow: 0 8px 22px -4px rgba(244, 63, 94, 0.6);

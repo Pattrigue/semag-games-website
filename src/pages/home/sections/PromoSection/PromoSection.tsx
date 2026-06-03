@@ -18,6 +18,7 @@ import {
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import vvLogo from "@/assets/vv-logo.webp";
+import { FeaturePill } from "@/pages/home/sections/PromoSection/components/FeaturePill";
 import classes from "./PromoSection.module.css";
 
 const FEATURES = [
@@ -80,11 +81,8 @@ export function PromoSection() {
                 wrap="wrap"
                 gap="xs"
               >
-                {FEATURES.map(({ icon: Icon, label }) => (
-                  <Box key={label} className={classes.pill}>
-                    <Icon size={16} weight="bold" />
-                    {label}
-                  </Box>
+                {FEATURES.map(({ icon, label }) => (
+                  <FeaturePill key={label} icon={icon} label={label} />
                 ))}
               </Flex>
 

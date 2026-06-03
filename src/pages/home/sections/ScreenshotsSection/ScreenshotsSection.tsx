@@ -1,7 +1,8 @@
-import { useRef } from "react";
-import { Box, Image, Stack, Text, Title } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
+import { Box, Image, Stack } from "@mantine/core";
 import AutoScroll from "embla-carousel-auto-scroll";
+import { useRef } from "react";
+import { SectionHeading } from "@/components/SectionHeading";
 import classes from "./ScreenshotsSection.module.css";
 
 // Placeholder screenshots — swap for real game captures later.
@@ -28,22 +29,18 @@ export function ScreenshotsSection() {
   );
 
   return (
-    <Box component="section" className={classes.section} py={{ base: 56, md: 80 }}>
+    <Box
+      component="section"
+      className={classes.section}
+      py={{ base: 56, md: 80 }}
+    >
       <Stack gap="xl" className={classes.inner}>
-        <Stack gap={4} align="center">
-          <Text
-            fz="sm"
-            fw={700}
-            tt="uppercase"
-            c="pink.4"
-            className={classes.eyebrow}
-          >
-            Screenshots
-          </Text>
-          <Title order={2} ta="center" fz={{ base: 28, sm: 36 }} fw={800} c="white">
-            See It in Action
-          </Title>
-        </Stack>
+        <SectionHeading
+          eyebrow="Screenshots"
+          eyebrowColor="pink.4"
+          title="See It in Action"
+          titleColor="white"
+        />
 
         {/* Full-bleed: no Container, so the strip spans the whole viewport. */}
         <Carousel
