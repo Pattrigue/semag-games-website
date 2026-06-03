@@ -10,7 +10,11 @@ const DISCORD_URL = "https://discord.gg/SSUTPCU";
 
 export function HeroSection() {
   return (
-    <Box component="section" className={classes.root} h={{ base: 600, md: 720 }}>
+    <Box
+      component="section"
+      className={classes.root}
+      h={{ base: 600, md: 720 }}
+    >
       <video autoPlay muted loop playsInline className={classes.video}>
         {/* webm first (small, modern); mp4 fallback for older Safari/iOS. */}
         <source src={gameplayWebm} type="video/webm" />
@@ -22,10 +26,11 @@ export function HeroSection() {
       <Stack
         className={classes.content}
         h="100%"
-        justify="center"
+        justify="flex-start"
         align="center"
         gap="xl"
         px="md"
+        pt={{ base: 56, md: 100 }}
       >
         <Box component="h1" className={classes.heading}>
           <Image
@@ -46,7 +51,7 @@ export function HeroSection() {
           fw={500}
           maw={600}
         >
-          A vibrant 2D platforming adventure with a quirky cast of characters.
+          A vibrant platforming adventure with a quirky cast of characters.
         </Text>
 
         <Group gap="md" justify="center">
