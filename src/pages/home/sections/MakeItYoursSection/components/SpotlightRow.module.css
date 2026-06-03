@@ -1,6 +1,5 @@
 .image {
   border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-  transition: transform 280ms ease;
 }
 
 /* Soft accent-colored glow behind each screenshot, tying it to the brand.
@@ -8,6 +7,7 @@
 .imageWrap {
   position: relative;
   isolation: isolate;
+  transition: transform 280ms ease;
 }
 
 /* Static ambient color wash behind the screenshot. */
@@ -37,6 +37,22 @@
   animation: glowPulse 2.6s ease-in-out infinite;
 }
 
-.imageWrap:hover .image {
+.imageWrap:hover {
   transform: scale(1.04);
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageWrap::before {
+    animation: none;
+  }
 }
