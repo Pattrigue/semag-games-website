@@ -7,22 +7,16 @@ import { Navbar } from "@/app/Navbar";
 import { theme } from "@/app/theme";
 import { Home } from "@/pages/home/Home";
 
+const HEADER_HEIGHT = 100;
+
 export function App() {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle, close }] = useDisclosure();
 
   return (
     <MantineProvider theme={theme}>
-      <AppShell
-        withBorder={false}
-        header={{ height: 100 }}
-        navbar={{
-          width: 300,
-          breakpoint: "sm",
-          collapsed: { desktop: true, mobile: !opened },
-        }}
-      >
+      <AppShell withBorder={false} header={{ height: HEADER_HEIGHT }}>
         <Header opened={opened} toggle={toggle} />
-        <Navbar />
+        <Navbar opened={opened} onClose={close} headerHeight={HEADER_HEIGHT} />
 
         <AppShell.Main>
           <Home />
