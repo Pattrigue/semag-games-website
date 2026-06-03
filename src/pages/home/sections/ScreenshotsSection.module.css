@@ -1,0 +1,54 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  /* Dark showcase band so the colorful screenshots pop and the page gets a
+     tonal beat between the light Promo and Make-it-yours sections. */
+  background: linear-gradient(180deg, #181226 0%, #0d0a16 100%);
+}
+
+/* Soft brand-hued glow behind the strip so the dark isn't flat. */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(1200px, 90%);
+  height: 460px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(236, 72, 153, 0.28),
+    rgba(139, 92, 246, 0.2) 42%,
+    transparent 72%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  letter-spacing: 0.12em;
+}
+
+/* Fade the looping strip into the background at the viewport edges so the
+   full-bleed roulette reads as infinite instead of hard-cut. */
+.carousel {
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 7%,
+    #000 93%,
+    transparent 100%
+  );
+}
