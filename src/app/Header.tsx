@@ -1,4 +1,4 @@
-import { AppShell, Burger, Group, Image, Text, Title } from "@mantine/core";
+import { AppShell, Burger, Group, Image, Title } from "@mantine/core";
 import { NavButtons } from "@/app/NavButtons";
 import logo from "@/assets/logo.png";
 import classes from "./Header.module.css";

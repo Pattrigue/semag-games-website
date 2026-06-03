@@ -1,15 +1,16 @@
-import "@mantine/core/styles.css";
 import { AppShell, MantineProvider, Stack } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Header } from "@/app/Header";
-import { NavButtons } from "@/app/NavButtons";
+import { Navbar } from "@/app/Navbar";
+import { theme } from "@/app/theme";
 import { Home } from "@/pages/home/Home";
+import "@mantine/core/styles.css";
 
 export function App() {
   const [opened, { toggle }] = useDisclosure();
 
   return (
-    <MantineProvider>
+    <MantineProvider theme={theme}>
       <AppShell
         withBorder={false}
         header={{ height: 100 }}
@@ -20,12 +21,7 @@ export function App() {
         }}
       >
         <Header opened={opened} toggle={toggle} />
-
-        <AppShell.Navbar p="md">
-          <Stack gap="xs">
-            <NavButtons />
-          </Stack>
-        </AppShell.Navbar>
+        <Navbar />
 
         <AppShell.Main>
           <Home />

@@ -30,7 +30,7 @@ function NavButton({
   return (
     <UnstyledButton className={classes.button} {...props}>
       <Group gap="xs">
-        <IconComponent size={24} />
+        <IconComponent size={24} weight="bold" />
         {children}
       </Group>
     </UnstyledButton>
