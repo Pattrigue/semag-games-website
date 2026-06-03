@@ -26,34 +26,39 @@ export function HeroSection() {
       <Stack
         className={classes.content}
         h="100%"
-        justify="flex-start"
+        justify="space-between"
         align="center"
         gap="xl"
         px="md"
-        pt={{ base: 56, md: 100 }}
+        pt={{ base: 12, md: 24 }}
+        pb={{ base: 40, md: 64 }}
       >
-        <Box component="h1" className={classes.heading}>
-          <Image
-            src={vvLogo}
-            alt="Vibrant Venture"
-            className={classes.logo}
-            w="auto"
-            fit="contain"
-            maw={{ base: 300, sm: 460 }}
-          />
-        </Box>
+        {/* Branding anchored to the top. */}
+        <Stack align="center" gap="md">
+          <Box component="h1" className={classes.heading}>
+            <Image
+              src={vvLogo}
+              alt="Vibrant Venture"
+              className={classes.logo}
+              w="auto"
+              fit="contain"
+              maw={{ base: 300, sm: 460 }}
+            />
+          </Box>
 
-        <Text
-          className={classes.tagline}
-          c="white"
-          ta="center"
-          fz={{ base: "lg", sm: "xl" }}
-          fw={500}
-          maw={600}
-        >
-          A vibrant platforming adventure with a quirky cast of characters.
-        </Text>
+          <Text
+            className={classes.tagline}
+            c="white"
+            ta="center"
+            fz={{ base: "lg", sm: "xl" }}
+            fw={500}
+            maw={600}
+          >
+            A vibrant platforming adventure with a quirky cast of characters.
+          </Text>
+        </Stack>
 
+        {/* CTAs anchored to the bottom, letting the gameplay own the middle. */}
         <Group gap="md" justify="center">
           <Button
             component="a"
