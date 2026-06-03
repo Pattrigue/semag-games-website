@@ -1,8 +1,9 @@
-import { AppShell, MantineProvider, Stack, Text } from "@mantine/core";
+import { AppShell, MantineProvider, Stack } from "@mantine/core";
 import { Header } from "@/app/Header";
+import { NavButtons } from "@/app/NavButtons";
+import { Home } from "@/pages/home/Home";
 import "@mantine/core/styles.css";
 import { useDisclosure } from "@mantine/hooks";
-import { NavButtons } from "@/app/NavButtons";
 
 export function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -16,7 +17,6 @@ export function App() {
           breakpoint: "sm",
           collapsed: { desktop: true, mobile: !opened },
         }}
-        padding="md"
       >
         <Header opened={opened} toggle={toggle} />
 
@@ -27,9 +27,9 @@ export function App() {
         </AppShell.Navbar>
 
         <AppShell.Main>
-          <Text>Content</Text>
+          <Home />
         </AppShell.Main>
-        <AppShell.Footer>Footer</AppShell.Footer>
+        <AppShell.Footer p="md">Footer</AppShell.Footer>
       </AppShell>
     </MantineProvider>
   );
