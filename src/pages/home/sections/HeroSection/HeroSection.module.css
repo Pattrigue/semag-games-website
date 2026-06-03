@@ -1,0 +1,58 @@
+.root {
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Cinematic scrim: darker top and bottom, lighter middle, so the logo and copy
+   stay readable over any frame of the footage. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.28) 40%,
+    rgba(0, 0, 0, 0.62) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.heading {
+  margin: 0;
+  line-height: 0;
+}
+
+.logo {
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.55));
+}
+
+.tagline {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Glowing primary CTA that lifts on hover. */
+.cta {
+  box-shadow: 0 8px 24px -4px rgba(244, 63, 94, 0.6);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -4px rgba(244, 63, 94, 0.75);
+}
