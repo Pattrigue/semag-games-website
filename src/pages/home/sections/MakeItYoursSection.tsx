@@ -20,6 +20,7 @@ import {
   SteamLogoIcon,
 } from "@phosphor-icons/react";
 import levelBuilderImg from "@/assets/level-builder.webp";
+import petMakerImg from "@/assets/pet-maker.webp";
 import classes from "./MakeItYoursSection.module.css";
 
 interface Spotlight {
@@ -33,10 +34,6 @@ interface Spotlight {
   cta: string;
   href: string;
 }
-
-// Placeholder screenshots — swap for real captures later.
-const img = (n: number) =>
-  `https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-${n}.png`;
 
 const SPOTLIGHTS: Spotlight[] = [
   {
@@ -66,7 +63,7 @@ const SPOTLIGHTS: Spotlight[] = [
       "Frame-by-frame animation",
       "Show your creations off online",
     ],
-    image: img(8),
+    image: petMakerImg,
     accent: "pink",
     cta: "Browse Pets",
     href: "https://steamcommunity.com/workshop/browse/?appid=1264520&section=readytouseitems&p=1&requiredtags%5B%5D=Pet",
