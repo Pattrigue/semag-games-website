@@ -56,13 +56,14 @@ export function ScreenshotsSection() {
         >
           {SCREENSHOTS.map((src, i) => (
             <Carousel.Slide key={src}>
-              <Image
-                src={src}
-                alt={`Vibrant Venture screenshot ${i + 1}`}
-                radius="md"
-                h={{ base: 200, sm: 320 }}
-                fit="cover"
-              />
+              <Box className={classes.slideInner}>
+                <Image
+                  src={src}
+                  alt={`Vibrant Venture screenshot ${i + 1}`}
+                  h={{ base: 200, sm: 320 }}
+                  fit="cover"
+                />
+              </Box>
             </Carousel.Slide>
           ))}
         </Carousel>

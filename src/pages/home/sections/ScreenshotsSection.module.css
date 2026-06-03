@@ -17,8 +17,8 @@
   transform: translate(-50%, -50%);
   background: radial-gradient(
     ellipse at center,
-    rgba(236, 72, 153, 0.28),
-    rgba(139, 92, 246, 0.2) 42%,
+    rgba(236, 72, 153, 0.38),
+    rgba(139, 92, 246, 0.28) 42%,
     transparent 72%
   );
   pointer-events: none;
@@ -32,6 +32,14 @@
 
 .eyebrow {
   letter-spacing: 0.12em;
+}
+
+/* Crisp edge + lift on each slide against the dark background. */
+.slideInner {
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.65);
 }
 
 /* Fade the looping strip into the background at the viewport edges so the
