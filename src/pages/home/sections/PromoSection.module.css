@@ -1,7 +1,17 @@
 .section {
   position: relative;
-  overflow: hidden;
+  /* No overflow:hidden here — the logo straddles the card's top edge and must
+     be free to poke above it. The sunburst is clipped by .backdrop instead. */
   isolation: isolate;
+}
+
+/* Clips the oversized rotating sunburst to the section bounds, decoupled from
+   .section so section content (the logo) can overflow freely. */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .sunburst {
@@ -17,8 +27,16 @@
   height: 150vmax;
   transform: translate(-50%, -50%);
   transform-origin: center;
-  z-index: -1;
   animation: spin 180s linear infinite;
+}
+
+/* Logo emblem straddling the card's top edge, horizontally centered. */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
 }
 
 @keyframes spin {
@@ -34,16 +52,82 @@
   /* ease-in-out approximates a sine ease, so the bob feels smooth at the
      top/bottom of its travel rather than linear. */
   animation: bob 4s ease-in-out infinite;
+  /* Soft shadow so the cast lifts off the busy background. */
+  filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.28));
 }
 
 @keyframes bob {
   0%,
   100% {
-    transform: translateY(-6px);
+    transform: translateY(-3px);
   }
   50% {
-    transform: translateY(6px);
+    transform: translateY(3px);
   }
+}
+
+.card {
+  /* Override Mantine Card's default overflow:hidden so the logo can straddle
+     the top edge instead of being clipped at the card border. */
+  overflow: visible;
+  /* Frosted glass so the rainbow background bleeds through instead of the card
+     looking pasted on. */
+  background-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /* Colored glow (purple + pink) tying the card to the vibrant palette. */
+  box-shadow:
+    0 18px 50px -12px rgba(139, 92, 246, 0.5),
+    0 8px 24px -8px rgba(236, 72, 153, 0.4);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 64px -12px rgba(139, 92, 246, 0.6),
+    0 14px 34px -8px rgba(236, 72, 153, 0.5);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  /* Keep each pill's label on one line; the row's wrap is controlled by the
+     parent (wraps on mobile, single row on desktop). */
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: var(--mantine-radius-xl);
+  background-color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 600;
+  color: var(--mantine-color-dark-6);
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.pill:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Glowing CTA that lifts on hover. */
+.playButton {
+  box-shadow: 0 8px 22px -4px rgba(244, 63, 94, 0.6);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.playButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -4px rgba(244, 63, 94, 0.75);
 }
 
 @media (prefers-reduced-motion: reduce) {

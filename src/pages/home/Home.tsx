@@ -6,7 +6,7 @@ export function Home() {
   return (
     <Stack gap={0}>
       <HeroSection />
-      <Box bg="white" h={6} />
+      <Box bg="white" h={4} />
       <PromoSection />
     </Stack>
   );
