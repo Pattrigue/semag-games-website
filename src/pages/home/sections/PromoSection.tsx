@@ -5,15 +5,13 @@ import {
   Card,
   Container,
   Flex,
-  Group,
   Image,
-  Stack,
   Text,
 } from "@mantine/core";
 import {
   GameControllerIcon,
   HammerIcon,
-  PawPrintIcon,
+  PaintBrushIcon,
   PlayIcon,
   UsersThreeIcon,
 } from "@phosphor-icons/react";
@@ -26,7 +24,7 @@ const FEATURES = [
   { icon: GameControllerIcon, label: "Controller Support" },
   { icon: UsersThreeIcon, label: "Online Multiplayer" },
   { icon: HammerIcon, label: "Level Builder" },
-  { icon: PawPrintIcon, label: "Pet Maker" },
+  { icon: PaintBrushIcon, label: "Pet Maker" },
 ];
 
 export function PromoSection() {
@@ -60,7 +58,11 @@ export function PromoSection() {
               fit="contain"
             />
 
-            <Stack gap="md" align={{ base: "center", md: "flex-start" }}>
+            <Flex
+              direction="column"
+              gap="md"
+              align={{ base: "center", md: "flex-start" }}
+            >
               <Text
                 c="dimmed"
                 fz={{ base: "md", sm: "lg" }}
@@ -94,18 +96,17 @@ export function PromoSection() {
                 <Button
                   className={classes.playButton}
                   size="md"
-                  radius="xl"
                   variant="gradient"
                   gradient={{ from: "red", to: "pink", deg: 45 }}
                   leftSection={<PlayIcon size={18} weight="fill" />}
                 >
                   Play Now
                 </Button>
-                <Button size="md" radius="xl" variant="default">
+                <Button size="md" variant="default">
                   Learn More
                 </Button>
               </Flex>
-            </Stack>
+            </Flex>
           </Card>
 
           <Image
