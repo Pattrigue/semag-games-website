@@ -1,10 +1,9 @@
+import "@mantine/core/styles.css";
 import { AppShell, MantineProvider, Stack } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import { Header } from "@/app/Header";
 import { NavButtons } from "@/app/NavButtons";
-import { theme } from "@/app/theme";
 import { Home } from "@/pages/home/Home";
-import "@mantine/core/styles.css";
-import { useDisclosure } from "@mantine/hooks";
 
 export function App() {
   const [opened, { toggle }] = useDisclosure();
