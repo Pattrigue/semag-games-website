@@ -1,8 +1,20 @@
 .section {
   position: relative;
-  /* No overflow:hidden here — the logo straddles the card's top edge and must
-     be free to poke above it. The sunburst is clipped by .backdrop instead. */
+  /* The oversized sunburst is clipped by .backdrop, not here. */
   isolation: isolate;
+}
+
+/* Gradient headline. Mantine Title has no gradient variant, so clip a gradient
+   to the text manually. */
+.title {
+  background-image: linear-gradient(
+    45deg,
+    var(--mantine-color-red-6) 0%,
+    var(--mantine-color-grape-6) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Clips the oversized rotating sunburst to the section bounds, decoupled from
@@ -28,15 +40,6 @@
   transform: translate(-50%, -50%);
   transform-origin: center;
   animation: spin 180s linear infinite;
-}
-
-/* Logo emblem straddling the card's top edge, horizontally centered. */
-.logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
 }
 
 @keyframes spin {
@@ -67,9 +70,6 @@
 }
 
 .card {
-  /* Override Mantine Card's default overflow:hidden so the logo can straddle
-     the top edge instead of being clipped at the card border. */
-  overflow: visible;
   /* Frosted glass so the rainbow background bleeds through instead of the card
      looking pasted on. */
   background-color: rgba(255, 255, 255, 0.72);

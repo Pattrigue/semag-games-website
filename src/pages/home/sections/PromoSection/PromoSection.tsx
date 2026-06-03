@@ -7,6 +7,7 @@ import {
   Flex,
   Image,
   Text,
+  Title,
 } from "@mantine/core";
 import {
   GameControllerIcon,
@@ -17,7 +18,6 @@ import {
 } from "@phosphor-icons/react";
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
-import vvLogo from "@/assets/vv-logo.webp";
 import { FeaturePill } from "@/pages/home/sections/PromoSection/components/FeaturePill";
 import classes from "./PromoSection.module.css";
 
@@ -47,24 +47,24 @@ export function PromoSection() {
             w="100%"
             miw={0}
             radius="lg"
-            px="xl"
-            pb="xl"
-            pt={{ base: 64, sm: 84 }}
-            pos="relative"
+            padding="xl"
           >
-            <Image
-              src={vvLogo}
-              alt="Vibrant Venture"
-              className={classes.logo}
-              w={{ base: 200, sm: 260 }}
-              fit="contain"
-            />
-
             <Flex
               direction="column"
               gap="md"
               align={{ base: "center", md: "flex-start" }}
             >
+              <Title
+                order={2}
+                fz={{ base: 28, sm: 38 }}
+                fw={800}
+                lh={1.15}
+                ta={{ base: "center", md: "left" }}
+                className={classes.title}
+              >
+                Jump into the adventure
+              </Title>
+
               <Text
                 c="dimmed"
                 fz={{ base: "md", sm: "lg" }}
