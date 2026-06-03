@@ -8,7 +8,6 @@ export function Home() {
   return (
     <Stack gap={0}>
       <HeroSection />
-      <Box bg="white" h={4} />
       <PromoSection />
       <ScreenshotsSection />
       <MakeItYoursSection />
