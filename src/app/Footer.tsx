@@ -2,7 +2,6 @@ import {
   ActionIcon,
   Box,
   Container,
-  Divider,
   Flex,
   Group,
   Image,
@@ -95,12 +94,15 @@ export function Footer() {
         >
           <Group gap="md" wrap="nowrap">
             <Image src={logo} w={56} h={56} alt="" />
-            <Box>
+            <Box ta={{ base: "center", sm: "left" }}>
               <Text c="white" fw={800} fz="lg" lh={1.2}>
                 Semag Games
               </Text>
               <Text c="dimmed" fz="sm">
                 Makers of Vibrant Venture
+              </Text>
+              <Text c="dimmed" fz="xs" mt={6}>
+                © {year} Semag Games. All rights reserved.
               </Text>
             </Box>
           </Group>
@@ -124,12 +126,6 @@ export function Footer() {
             ))}
           </Group>
         </Flex>
-
-        <Divider className={classes.divider} my="lg" />
-
-        <Text c="dimmed" fz="sm" ta="center">
-          © {year} Semag Games. All rights reserved.
-        </Text>
       </Container>
     </Box>
   );
