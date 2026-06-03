@@ -3,6 +3,7 @@ import "@mantine/carousel/styles.css";
 
 import { AppShell, MantineProvider } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { Footer } from "@/app/Footer";
 import { Header } from "@/app/Header";
 import { Navbar } from "@/app/Navbar";
 import { theme } from "@/app/theme";
@@ -14,15 +15,15 @@ export function App() {
   const [opened, { toggle, close }] = useDisclosure();
 
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} forceColorScheme="light">
       <AppShell withBorder={false} header={{ height: HEADER_HEIGHT }}>
         <Header opened={opened} toggle={toggle} />
         <Navbar opened={opened} onClose={close} headerHeight={HEADER_HEIGHT} />
 
         <AppShell.Main>
           <Home />
+          <Footer />
         </AppShell.Main>
-        {/* <AppShell.Footer p="md">Footer</AppShell.Footer> */}
       </AppShell>
     </MantineProvider>
   );

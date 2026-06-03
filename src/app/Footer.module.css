@@ -1,0 +1,22 @@
+.root {
+  /* Deep brand purple (not flat black) so the footer feels part of the vibrant
+     palette and echoes the dark Screenshots band. */
+  background: linear-gradient(180deg, #271d4a 0%, #1a1433 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social {
+  color: var(--mantine-color-gray-5);
+  transition:
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.social:hover {
+  color: var(--mantine-color-white);
+  transform: translateY(-2px);
+}
+
+.divider {
+  border-color: rgba(255, 255, 255, 0.08);
+}
