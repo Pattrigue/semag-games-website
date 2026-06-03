@@ -1,5 +1,6 @@
 import { Drawer, Stack } from "@mantine/core";
 import { NavButtons } from "@/app/NavButtons";
+import classes from "./Navbar.module.css";
 
 interface NavbarProps {
   headerHeight: number;
@@ -17,13 +18,14 @@ export function Navbar({ headerHeight, opened, onClose }: NavbarProps) {
       withCloseButton={false}
       hiddenFrom="sm"
       zIndex={10}
+      classNames={{ content: classes.content }}
       styles={{
         inner: { top: headerHeight },
-        content: { backgroundColor: "#1a1a1a", height: "auto" },
+        content: { height: "auto" },
       }}
     >
       <Stack gap="xs">
-        <NavButtons />
+        <NavButtons variant="navbar" />
       </Stack>
     </Drawer>
   );

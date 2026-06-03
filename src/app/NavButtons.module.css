@@ -11,6 +11,12 @@
   font-weight: 600;
 }
 
-.button:hover {
+/* header (red gradient background): deep red lift */
+.button[data-variant="header"]:hover {
   background-color: rgba(139, 34, 50, 0.7);
+}
+
+/* navbar drawer (translucent red glass background): frosted white lift */
+.button[data-variant="navbar"]:hover {
+  background-color: rgba(255, 255, 255, 0.18);
 }

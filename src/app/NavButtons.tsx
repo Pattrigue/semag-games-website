@@ -7,12 +7,22 @@ import {
 } from "@phosphor-icons/react";
 import classes from "./NavButtons.module.css";
 
-export function NavButtons() {
+interface NavButtonsProps {
+  variant?: "header" | "navbar";
+}
+
+export function NavButtons({ variant = "header" }: NavButtonsProps) {
   return (
     <>
-      <NavButton icon={HouseIcon}>Home</NavButton>
-      <NavButton icon={ArticleIcon}>Blog</NavButton>
-      <NavButton icon={EnvelopeIcon}>Contacts</NavButton>
+      <NavButton icon={HouseIcon} data-variant={variant}>
+        Home
+      </NavButton>
+      <NavButton icon={ArticleIcon} data-variant={variant}>
+        Blog
+      </NavButton>
+      <NavButton icon={EnvelopeIcon} data-variant={variant}>
+        Contacts
+      </NavButton>
     </>
   );
 }
