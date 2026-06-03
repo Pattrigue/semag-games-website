@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import {
+  AspectRatio,
   Badge,
   Box,
   Button,
@@ -96,22 +97,16 @@ function SpotlightRow({
       align="center"
       gap={{ base: 32, md: 64 }}
     >
-      <Box
-        flex={1.25}
+      <AspectRatio
+        ratio={16 / 9}
+        flex={1.6}
         w="100%"
         miw={0}
         className={classes.imageWrap}
         style={{ "--accent": accentVar } as CSSProperties}
       >
-        <Image
-          src={image}
-          alt={tag}
-          radius="lg"
-          h={{ base: 260, sm: 420 }}
-          fit="cover"
-          className={classes.image}
-        />
-      </Box>
+        <Image src={image} alt={tag} radius="lg" className={classes.image} />
+      </AspectRatio>
 
       <Stack flex={1} miw={0} gap="md" align="flex-start">
         <Badge
@@ -168,7 +163,7 @@ export function MakeItYoursSection() {
         <Box className={`${classes.blob} ${classes.blob4}`} />
       </Box>
 
-      <Container size="lg" className={classes.content}>
+      <Container size="xl" className={classes.content}>
         <Flex direction="column" gap={{ base: 56, md: 72 }}>
           <Stack gap="sm" align="center" maw={640} mx="auto">
             <Text
