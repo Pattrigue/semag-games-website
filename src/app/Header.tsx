@@ -21,7 +21,7 @@ export function Header({ opened, toggle }: HeaderProps) {
           lineSize={3}
         />
         <Group justify="space-between" style={{ flex: 1 }}>
-          <Group>
+          <Group ml={{ base: "auto", sm: 0 }}>
             <Image src={logo} w={75} h={75} />
             <Title c="white" visibleFrom="sm" order={2}>
               Semag Games
