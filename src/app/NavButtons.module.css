@@ -1,0 +1,17 @@
+.button {
+  background: transparent;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: var(--mantine-radius-xl);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  font-size: var(--mantine-font-size-xl);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: rgba(215, 88, 88, 0.7);
+  border-color: rgba(215, 88, 88, 0.7);
+}
