@@ -4,10 +4,10 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
-	resolve: {
-		alias: {
-			"@": "/src",
-		},
-	},
+  plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
 });
