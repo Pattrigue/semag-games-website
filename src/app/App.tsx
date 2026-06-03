@@ -1,6 +1,7 @@
 import { AppShell, MantineProvider, Stack } from "@mantine/core";
 import { Header } from "@/app/Header";
 import { NavButtons } from "@/app/NavButtons";
+import { theme } from "@/app/theme";
 import { Home } from "@/pages/home/Home";
 import "@mantine/core/styles.css";
 import { useDisclosure } from "@mantine/hooks";
@@ -11,6 +12,7 @@ export function App() {
   return (
     <MantineProvider>
       <AppShell
+        withBorder={false}
         header={{ height: 100 }}
         navbar={{
           width: 300,
