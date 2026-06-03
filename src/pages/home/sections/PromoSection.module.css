@@ -1,0 +1,54 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.sunburst {
+  position: absolute;
+  /* Square sized to 1.5x the larger viewport dimension (vmax), so it always
+     covers the section — wide on desktop, tall on mobile — and the rotating
+     square never reveals its corners (1.5x clears the ~1.41x diagonal). vmax
+     is used instead of % because the section's height is auto (content-driven),
+     so a percentage height would have nothing definite to resolve against. */
+  top: 50%;
+  left: 50%;
+  width: 150vmax;
+  height: 150vmax;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  z-index: -1;
+  animation: spin 180s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.characters {
+  /* ease-in-out approximates a sine ease, so the bob feels smooth at the
+     top/bottom of its travel rather than linear. */
+  animation: bob 4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sunburst,
+  .characters {
+    animation: none;
+  }
+}

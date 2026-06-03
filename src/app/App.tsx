@@ -21,7 +21,7 @@ export function App() {
         <AppShell.Main>
           <Home />
         </AppShell.Main>
-        <AppShell.Footer p="md">Footer</AppShell.Footer>
+        {/* <AppShell.Footer p="md">Footer</AppShell.Footer> */}
       </AppShell>
     </MantineProvider>
   );
