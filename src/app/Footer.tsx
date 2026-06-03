@@ -19,7 +19,10 @@ import {
   XLogoIcon,
   YoutubeLogoIcon,
 } from "@phosphor-icons/react";
+import { useRef, useState } from "react";
 import logo from "@/assets/logo.png";
+import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
+import violastro from "@/assets/violastro.webp";
 import classes from "./Footer.module.css";
 
 interface Social {
@@ -53,9 +56,37 @@ const SOCIALS: Social[] = [
 export function Footer() {
   const year = new Date().getFullYear();
 
+  // Click Violastro for his signature "bwehehe" and a wiggle.
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [wiggling, setWiggling] = useState(false);
+
+  const handleViolastroClick = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio(violastroBwehehe);
+    }
+    audioRef.current.currentTime = 0;
+    void audioRef.current.play();
+    setWiggling(true);
+  };
+
   return (
     <Box component="footer" className={classes.root}>
-      <Container size="xl" py={{ base: 40, sm: 48 }}>
+      {/* Violastro, the purple villain, peeking up from behind the footer's top
+          edge; pops up on hover, cackles + wiggles on click. */}
+      <div
+        aria-hidden
+        className={classes.violastro}
+        onClick={handleViolastroClick}
+      >
+        <img
+          src={violastro}
+          alt=""
+          className={`${classes.violastroImg}${wiggling ? ` ${classes.wiggle}` : ""}`}
+          onAnimationEnd={() => setWiggling(false)}
+        />
+      </div>
+
+      <Container size="xl" py={{ base: 40, sm: 48 }} className={classes.content}>
         <Flex
           direction={{ base: "column", sm: "row" }}
           justify="space-between"
