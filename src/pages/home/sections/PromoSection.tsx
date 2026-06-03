@@ -44,6 +44,7 @@ export function PromoSection() {
             className={classes.card}
             flex={1}
             w="100%"
+            miw={0}
             radius="lg"
             px="xl"
             pb="xl"
@@ -76,7 +77,7 @@ export function PromoSection() {
               <Flex
                 direction={{ base: "column", md: "row" }}
                 align={{ base: "center", md: "flex-start" }}
-                wrap="nowrap"
+                wrap="wrap"
                 gap="xs"
               >
                 {FEATURES.map(({ icon: Icon, label }) => (
