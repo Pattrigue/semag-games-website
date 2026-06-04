@@ -35,7 +35,7 @@ export function Header({ opened, toggle }: HeaderProps) {
               src={semagGamesTypography}
               alt="Semag Games"
               w="auto"
-              h={{ base: 24, sm: 32 }}
+              h={32}
               fit="contain"
             />
           </Group>
