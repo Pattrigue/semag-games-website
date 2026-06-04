@@ -34,7 +34,7 @@ export function ScreenshotsSection() {
         <SectionHeading
           eyebrow="Screenshots"
           eyebrowColor="pink.4"
-          title="See It in Action"
+          title="Sights From the Adventure"
           titleColor="white"
         />
 
