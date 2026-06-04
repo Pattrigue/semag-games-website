@@ -5,12 +5,6 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
-.textPanel {
-  background-color: rgb(156, 122, 106);
-  border-radius: 12px;
-  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
-}
-
 .title {
   color: white;
   font-family: LanaPixel, Nunito, sans-serif;

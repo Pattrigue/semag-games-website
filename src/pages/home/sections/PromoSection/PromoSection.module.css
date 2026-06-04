@@ -83,16 +83,6 @@
   border-radius: 0;
 }
 
-.innerPanel {
-  background-color: rgb(156, 122, 106);
-  border-radius: 12px;
-  padding: var(--mantine-spacing-md) var(--mantine-spacing-xl);
-  color: white;
-  font-family: LanaPixel, Nunito, sans-serif;
-  -webkit-font-smoothing: none;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .sunburst,
   .characters {

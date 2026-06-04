@@ -1,0 +1,10 @@
+.panel {
+  border: 16px solid transparent;
+  border-image: url("../assets/panel-brown-2x.png") 16 fill round;
+  padding: calc(var(--mantine-spacing-md) - 8px)
+    calc(var(--mantine-spacing-xl) - 8px);
+  color: white;
+  font-family: LanaPixel, Nunito, sans-serif;
+  -webkit-font-smoothing: none;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}

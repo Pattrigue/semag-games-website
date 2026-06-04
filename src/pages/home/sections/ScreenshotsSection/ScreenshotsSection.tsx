@@ -3,7 +3,7 @@ import { AspectRatio, Box, Image, Stack } from "@mantine/core";
 import { useReducedMotion } from "@mantine/hooks";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useRef } from "react";
-import { SectionHeading } from "@/components/SectionHeading";
+import ribbonScreenshots from "@/assets/ribbon-screenshots-2x.png";
 import { SCREENSHOTS } from "@/pages/home/sections/ScreenshotsSection/screenshots";
 import classes from "./ScreenshotsSection.module.css";
 
@@ -12,8 +12,6 @@ export function ScreenshotsSection() {
     getInitialValueInEffect: false,
   });
 
-  // Continuous, constant-speed drift (marquee-style); pauses on hover and
-  // resumes after manual drags. Held still for reduced-motion users.
   const autoScroll = useRef(
     AutoScroll({
       speed: 1,
@@ -28,12 +26,18 @@ export function ScreenshotsSection() {
     <Box
       component="section"
       className={classes.section}
-      py={{ base: 56, md: 80 }}
+      pt={{ base: 28, md: 36 }}
+      pb={{ base: 56, md: 80 }}
     >
       <Stack gap="xl" className={classes.inner}>
-        <SectionHeading title="Sights From the Adventure" titleColor="white" />
+        <Box component="h2" className={classes.ribbonHeading}>
+          <img
+            src={ribbonScreenshots}
+            alt="Screenshots"
+            className={classes.ribbon}
+          />
+        </Box>
 
-        {/* Full-bleed: no Container, so the strip spans the whole viewport. */}
         <Carousel
           classNames={{ root: classes.carousel }}
           slideSize={{ base: "80%", sm: "48%", md: "33%" }}
@@ -45,7 +49,6 @@ export function ScreenshotsSection() {
           {SCREENSHOTS.map((src, i) => (
             <Carousel.Slide key={src}>
               <Box className={classes.slideInner}>
-                {/* All captures are 16:9 — lock the ratio so nothing crops. */}
                 <AspectRatio ratio={16 / 9}>
                   <Image
                     src={src}

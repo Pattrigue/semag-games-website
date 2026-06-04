@@ -20,6 +20,7 @@ import PlayFilledIcon from "@/assets/icons/play-filled.svg?react";
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
+import { GamePanel } from "@/components/GamePanel";
 import { TrailerModal } from "@/pages/home/sections/PromoSection/components/TrailerModal";
 import { STEAM_URL } from "@/utils/urls";
 import classes from "./PromoSection.module.css";
@@ -71,50 +72,46 @@ export function PromoSection() {
               </Title>
             </Box>
 
-            <Flex
-              className={classes.innerPanel}
-              direction="column"
-              gap="md"
-              align="center"
-            >
-              <Text fz={22} lh={1.4} ta="center">
-                The dastardly{" "}
-                <img
-                  src={violastroIcon}
-                  alt=""
-                  className={classes.violastroIcon}
-                />{" "}
-                <span className={classes.violastroName}>Violastro</span> has
-                stolen the Power Crystals!
-              </Text>
+            <GamePanel>
+              <Flex direction="column" gap="md" align="center">
+                <Text fz={22} lh={1.4} ta="center">
+                  The dastardly{" "}
+                  <img
+                    src={violastroIcon}
+                    alt=""
+                    className={classes.violastroIcon}
+                  />{" "}
+                  <span className={classes.violastroName}>Violastro</span> has
+                  stolen the Power Crystals!
+                </Text>
 
-              <Text fz={22} lh={1.4} ta="center">
-                Swap between four quirky heroes and combine their unique
-                abilities for fluid, versatile movement as you chase him down
-                across vibrant 2D worlds.
-              </Text>
+                <Text fz={22} lh={1.4} ta="center">
+                  Swap between four quirky heroes and combine their unique
+                  abilities for fluid, versatile movement as you chase him down
+                  across vibrant 2D worlds.
+                </Text>
 
-              <Flex
-                direction={{ base: "column", md: "row" }}
-                align="center"
-                justify="center"
-                wrap="wrap"
-                gap="xs"
-              >
-                {FEATURES.map(({ icon: FeatureIcon, label, color }) => (
-                  <Badge
-                    key={label}
-                    variant="filled"
-                    color={color}
-                    radius="xl"
-                    leftSection={<FeatureIcon width={20} height={20} />}
-                  >
-                    {label}
-                  </Badge>
-                ))}
+                <Flex
+                  direction={{ base: "column", md: "row" }}
+                  align="center"
+                  justify="center"
+                  wrap="wrap"
+                  gap="xs"
+                >
+                  {FEATURES.map(({ icon: FeatureIcon, label, color }) => (
+                    <Badge
+                      key={label}
+                      variant="filled"
+                      color={color}
+                      radius="xl"
+                      leftSection={<FeatureIcon width={20} height={20} />}
+                    >
+                      {label}
+                    </Badge>
+                  ))}
+                </Flex>
               </Flex>
-
-            </Flex>
+            </GamePanel>
 
             {/* Buttons live on the striped card surface, outside the tan
                 text panel — matching the game's menus. */}
