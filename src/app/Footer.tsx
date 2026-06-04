@@ -23,6 +23,15 @@ import logo from "@/assets/logo.png";
 import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
 import violastro from "@/assets/violastro.webp";
 import classes from "./Footer.module.css";
+import {
+  BLUESKY_URL,
+  DISCORD_URL,
+  INSTAGRAM_URL,
+  STEAM_URL,
+  TIKTOK_URL,
+  X_URL,
+  YOUTUBE_URL,
+} from "@/utils/urls";
 
 interface Social {
   label: string;
@@ -31,23 +40,27 @@ interface Social {
 }
 
 const SOCIALS: Social[] = [
-  { label: "Discord", href: "https://discord.gg/SSUTPCU", icon: DiscordLogoIcon },
-  { label: "YouTube", href: "https://www.youtube.com/c/semaggames", icon: YoutubeLogoIcon },
+  { label: "Discord", href: DISCORD_URL, icon: DiscordLogoIcon },
+  { label: "YouTube", href: YOUTUBE_URL, icon: YoutubeLogoIcon },
   {
     label: "Steam",
-    href: "https://store.steampowered.com/app/1264520/Vibrant_Venture/",
+    href: STEAM_URL,
     icon: SteamLogoIcon,
   },
-  { label: "X", href: "https://x.com/Pattrigue", icon: XLogoIcon },
-  { label: "TikTok", href: "https://www.tiktok.com/@playvibrantventure", icon: TiktokLogoIcon },
+  { label: "X", href: X_URL, icon: XLogoIcon },
+  {
+    label: "TikTok",
+    href: TIKTOK_URL,
+    icon: TiktokLogoIcon,
+  },
   {
     label: "Bluesky",
-    href: "https://bsky.app/profile/vibrant-venture.bsky.social",
+    href: BLUESKY_URL,
     icon: ButterflyIcon,
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/playvibrantventure",
+    href: INSTAGRAM_URL,
     icon: InstagramLogoIcon,
   },
 ];
@@ -85,7 +98,11 @@ export function Footer() {
         />
       </div>
 
-      <Container size="xl" py={{ base: 40, sm: 48 }} className={classes.content}>
+      <Container
+        size="xl"
+        py={{ base: 40, sm: 48 }}
+        className={classes.content}
+      >
         <Flex
           direction={{ base: "column", sm: "row" }}
           justify="space-between"

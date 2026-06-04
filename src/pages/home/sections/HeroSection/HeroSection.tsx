@@ -1,12 +1,10 @@
-import { Box, Button, Group, Image, Stack, Text } from "@mantine/core";
+import { Box, Button, Group, Image, Stack } from "@mantine/core";
 import { DiscordLogoIcon, SteamLogoIcon } from "@phosphor-icons/react";
 import gameplayMp4 from "@/assets/gameplay.mp4";
 import gameplayWebm from "@/assets/gameplay.webm";
 import vvLogo from "@/assets/vv-logo.webp";
+import { DISCORD_URL, STEAM_URL } from "@/utils/urls";
 import classes from "./HeroSection.module.css";
-
-const STEAM_URL = "https://store.steampowered.com/app/1264520/Vibrant_Venture/";
-const DISCORD_URL = "https://discord.gg/SSUTPCU";
 
 export function HeroSection() {
   return (
@@ -45,17 +43,6 @@ export function HeroSection() {
               maw={{ base: 300, sm: 460 }}
             />
           </Box>
-
-          <Text
-            className={classes.tagline}
-            c="white"
-            ta="center"
-            fz={{ base: "lg", sm: "xl" }}
-            fw={500}
-            maw={600}
-          >
-            A vibrant platforming adventure with a quirky cast of characters.
-          </Text>
         </Stack>
 
         {/* CTAs anchored to the bottom, letting the gameplay own the middle. */}
