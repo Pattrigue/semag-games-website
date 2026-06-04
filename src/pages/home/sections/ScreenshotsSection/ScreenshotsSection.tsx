@@ -1,16 +1,17 @@
 import { Carousel } from "@mantine/carousel";
 import { AspectRatio, Box, Image, Stack } from "@mantine/core";
+import { useReducedMotion } from "@mantine/hooks";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useRef } from "react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SCREENSHOTS } from "@/pages/home/sections/ScreenshotsSection/screenshots";
 import classes from "./ScreenshotsSection.module.css";
 
-const prefersReducedMotion =
-  typeof window !== "undefined" &&
-  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 export function ScreenshotsSection() {
+  const prefersReducedMotion = useReducedMotion(false, {
+    getInitialValueInEffect: false,
+  });
+
   // Continuous, constant-speed drift (marquee-style); pauses on hover and
   // resumes after manual drags. Held still for reduced-motion users.
   const autoScroll = useRef(
