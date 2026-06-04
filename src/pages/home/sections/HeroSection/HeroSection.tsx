@@ -52,9 +52,9 @@ export function HeroSection() {
             href={STEAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            size="lg"
+            size="xl"
             variant="filled"
-            leftSection={<SteamLogoIcon size={22} weight="fill" />}
+            leftSection={<SteamLogoIcon size={30} weight="fill" />}
           >
             Play on Steam
           </Button>
@@ -63,9 +63,9 @@ export function HeroSection() {
             href={DISCORD_URL}
             target="_blank"
             rel="noopener noreferrer"
-            size="lg"
+            size="xl"
             variant="default"
-            leftSection={<DiscordLogoIcon size={22} weight="fill" />}
+            leftSection={<DiscordLogoIcon size={30} weight="fill" />}
           >
             Join Discord
           </Button>

@@ -1,8 +1,5 @@
-/* Game-UI buttons: "filled" = the in-game orange plaque, "default" = the
-   white pause-menu button. Colors sampled from the game. */
 .root {
   border-radius: 6px;
-  /* Keep the fill from bleeding past the border at rounded corners. */
   background-clip: padding-box;
   transition:
     background-color 80ms ease-out,
@@ -14,6 +11,10 @@
   font-size: 22px;
   font-weight: 400;
   -webkit-font-smoothing: none;
+}
+
+.root[data-size="xl"] .label {
+  font-size: 33px;
 }
 
 .section[data-position="left"] {
