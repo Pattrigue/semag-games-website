@@ -11,6 +11,7 @@ import {
 import {
   ButterflyIcon,
   DiscordLogoIcon,
+  HeartIcon,
   type Icon,
   InstagramLogoIcon,
   SteamLogoIcon,
@@ -20,9 +21,8 @@ import {
 } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
 import logo from "@/assets/logo.png";
-import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
 import violastro from "@/assets/violastro.webp";
-import classes from "./Footer.module.css";
+import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
 import {
   BLUESKY_URL,
   DISCORD_URL,
@@ -32,6 +32,7 @@ import {
   X_URL,
   YOUTUBE_URL,
 } from "@/utils/urls";
+import classes from "./Footer.module.css";
 
 interface Social {
   label: string;
@@ -112,14 +113,18 @@ export function Footer() {
           <Group gap="md" wrap="nowrap">
             <Image src={logo} w={56} h={56} alt="" />
             <Box ta={{ base: "center", sm: "left" }}>
-              <Text c="white" fw={800} fz="lg" lh={1.2}>
-                Semag Games
+              <Text c="dimmed" fz="xs">
+                © {year} Semag Games
               </Text>
               <Text c="dimmed" fz="sm">
-                Makers of Vibrant Venture
-              </Text>
-              <Text c="dimmed" fz="xs" mt={6}>
-                © {year} Semag Games. All rights reserved.
+                Made with{" "}
+                <HeartIcon
+                  size={14}
+                  weight="fill"
+                  color="var(--mantine-color-red-6)"
+                  style={{ verticalAlign: "-0.125em" }}
+                />{" "}
+                by Pattrigue
               </Text>
             </Box>
           </Group>
