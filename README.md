@@ -1,6 +1,6 @@
 # Semag Games Website
 
-The official [Semag Games](https://semag-games.com) website, home of **Vibrant Venture** — a colorful 2D adventure platformer, [out now on Steam](https://store.steampowered.com/app/1264520/Vibrant_Venture/).
+The official [Semag Games](https://semag-games.com) website, home of **Vibrant Venture**, a colorful 2D adventure platformer, [out now on Steam](https://store.steampowered.com/app/1264520/Vibrant_Venture/).
 
 ## Tech stack
 
