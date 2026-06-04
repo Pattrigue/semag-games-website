@@ -1,0 +1,16 @@
+/* Vibrant Venture design tokens, sampled from the in-game UI. */
+:root {
+  --vv-orange: #e8924a;
+  --vv-orange-dark: #a85d20;
+  --vv-cream: #fff6e3;
+  --vv-tan: #d9c4a5;
+  --vv-tan-deep: #c9af8d;
+  --vv-blue-light: #cfe9f8;
+  --vv-blue: #4aa8e0;
+  --vv-navy: #1d3a5f;
+  --vv-navy-deep: #122741;
+  --vv-purple: #7a4ba8;
+  --vv-purple-dark: #4b2d6e;
+  --vv-gold: #f3c84b;
+  --vv-shadow: rgba(60, 30, 10, 0.35);
+}

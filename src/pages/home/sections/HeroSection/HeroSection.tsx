@@ -52,11 +52,8 @@ export function HeroSection() {
             href={STEAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.cta}
             size="lg"
-            radius="md"
-            variant="gradient"
-            gradient={{ from: "red", to: "pink", deg: 45 }}
+            variant="filled"
             leftSection={<SteamLogoIcon size={22} weight="fill" />}
           >
             Play on Steam
@@ -67,9 +64,7 @@ export function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
-            radius="md"
-            variant="white"
-            color="dark"
+            variant="default"
             leftSection={<DiscordLogoIcon size={22} weight="fill" />}
           >
             Join Discord

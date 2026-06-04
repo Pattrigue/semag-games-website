@@ -1,5 +1,7 @@
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+import "@/app/fonts.css";
+import "@/app/tokens.css";
 
 import { AppShell, MantineProvider } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";

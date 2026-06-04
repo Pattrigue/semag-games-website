@@ -1,0 +1,9 @@
+/* LanaPixel: the game's pixel font, subset to Latin. Use at multiples of
+   11px so the pixels stay square. */
+@font-face {
+  font-family: "LanaPixel";
+  src: url("../assets/fonts/lanapixel.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

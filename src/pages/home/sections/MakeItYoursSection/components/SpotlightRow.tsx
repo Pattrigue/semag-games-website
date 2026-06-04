@@ -85,9 +85,8 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          color={accent}
+          variant="default"
           size="md"
-          radius="md"
           mt="sm"
           leftSection={<SteamLogoIcon size={20} weight="fill" />}
           rightSection={<CaretDoubleRightIcon size={16} weight="bold" />}

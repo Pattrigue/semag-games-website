@@ -118,10 +118,8 @@ export function PromoSection() {
                   href={STEAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={classes.playButton}
                   size="md"
-                  variant="gradient"
-                  gradient={{ from: "red", to: "pink", deg: 45 }}
+                  variant="filled"
                   leftSection={<PlayIcon size={18} weight="fill" />}
                 >
                   Play Now
