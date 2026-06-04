@@ -1,52 +1,19 @@
-.image {
-  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-}
-
 .imageWrap {
-  position: relative;
-  isolation: isolate;
-  transition: transform 280ms ease;
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+  border: 10px solid white;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
-.imageWrap::after {
-  content: "";
-  position: absolute;
-  inset: 6%;
-  border-radius: var(--mantine-radius-lg);
-  background: var(--accent);
-  filter: blur(52px);
-  opacity: 0.32;
-  z-index: -1;
+.textPanel {
+  background-color: rgb(156, 122, 106);
+  border-radius: 12px;
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
 }
 
-.imageWrap::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--mantine-radius-lg);
-  box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--accent) 45%, transparent),
-    0 0 38px 2px color-mix(in srgb, var(--accent) 85%, transparent);
-  z-index: -1;
-  animation: glowPulse 2.6s ease-in-out infinite;
-}
-
-.imageWrap:hover {
-  transform: scale(1.04);
-}
-
-@keyframes glowPulse {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .imageWrap::before {
-    animation: none;
-  }
+.title {
+  color: white;
+  font-family: LanaPixel, Nunito, sans-serif;
+  -webkit-font-smoothing: none;
+  text-shadow: 0 calc(1em / 11) 0 rgba(0, 0, 0, 0.5);
 }

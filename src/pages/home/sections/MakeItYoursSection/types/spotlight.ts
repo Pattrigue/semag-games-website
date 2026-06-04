@@ -1,13 +1,13 @@
-import type { Icon } from "@phosphor-icons/react";
+import type { ComponentType, SVGProps } from "react";
 
 export interface Spotlight {
-  icon: Icon;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   tag: string;
   title: string;
   description: string;
   bullets: string[];
   image: string;
-  accent: string; // Mantine color key
+  accent: string; // CSS color
   cta: string;
   href: string;
 }

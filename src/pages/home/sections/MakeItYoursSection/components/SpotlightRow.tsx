@@ -9,12 +9,8 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import {
-  CaretDoubleRightIcon,
-  CheckCircleIcon,
-  SteamLogoIcon,
-} from "@phosphor-icons/react";
-import type { CSSProperties } from "react";
+import ChevronsRightIcon from "pixelarticons/svg/chevron-right-2.svg?react";
+import { SteamLogoIcon } from "@phosphor-icons/react";
 import type { Spotlight } from "@/pages/home/sections/MakeItYoursSection/types/spotlight";
 import classes from "./SpotlightRow.module.css";
 
@@ -35,7 +31,6 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
     cta,
     href,
   } = data;
-  const accentVar = `var(--mantine-color-${accent}-5)`;
 
   return (
     <Flex
@@ -49,33 +44,41 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
         w="100%"
         miw={0}
         className={classes.imageWrap}
-        style={{ "--accent": accentVar } as CSSProperties}
       >
-        <Image src={image} alt={tag} radius="lg" className={classes.image} />
+        <Image src={image} alt={tag} />
       </AspectRatio>
 
-      <Stack flex={1} miw={0} gap="md" align="flex-start">
+      <Stack
+        flex={1}
+        miw={0}
+        gap="md"
+        align="flex-start"
+        className={classes.textPanel}
+      >
         <Badge
+          variant="filled"
           color={accent}
-          variant="light"
-          size="lg"
-          radius="sm"
-          leftSection={<FeatureIcon size={14} weight="bold" />}
+          radius="xl"
+          leftSection={<FeatureIcon width={20} height={20} />}
         >
           {tag}
         </Badge>
 
-        <Title order={3} fz={{ base: 26, sm: 34 }} fw={800} lh={1.15}>
+        <Title order={3} fz={33} fw={400} lh={1.15} className={classes.title}>
           {title}
         </Title>
 
-        <Text fz={{ base: "md", sm: "lg" }}>{description}</Text>
+        <Text fz={22} lh={1.4}>
+          {description}
+        </Text>
 
         <Stack gap="xs" mt={4}>
           {bullets.map((bullet) => (
             <Group key={bullet} gap="sm" wrap="nowrap" align="center">
-              <CheckCircleIcon size={20} weight="fill" color={accentVar} />
-              <Text fw={500}>{bullet}</Text>
+              <Text component="span" fz={22} style={{ color: accent }}>
+                •
+              </Text>
+              <Text fz={22}>{bullet}</Text>
             </Group>
           ))}
         </Stack>
@@ -89,7 +92,7 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
           size="md"
           mt="sm"
           leftSection={<SteamLogoIcon size={20} weight="fill" />}
-          rightSection={<CaretDoubleRightIcon size={16} weight="bold" />}
+          rightSection={<ChevronsRightIcon width={18} height={18} />}
         >
           {cta}
         </Button>

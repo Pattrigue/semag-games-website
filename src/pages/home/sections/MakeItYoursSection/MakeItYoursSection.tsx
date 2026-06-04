@@ -1,5 +1,6 @@
-import { Box, Container, Flex, Stack, Text } from "@mantine/core";
-import { HammerIcon, PaintBrushIcon } from "@phosphor-icons/react";
+import { Box, Container, Flex } from "@mantine/core";
+import BlocksIcon from "pixelarticons/svg/blocks.svg?react";
+import BrushIcon from "pixelarticons/svg/brush.svg?react";
 import levelBuilderImg from "@/assets/level-builder.webp";
 import petMakerImg from "@/assets/pet-maker.webp";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -9,7 +10,7 @@ import classes from "./MakeItYoursSection.module.css";
 
 const SPOTLIGHTS: Spotlight[] = [
   {
-    icon: HammerIcon,
+    icon: BlocksIcon,
     tag: "Level Builder",
     title: "Build worlds, your way",
     description:
@@ -20,12 +21,12 @@ const SPOTLIGHTS: Spotlight[] = [
       "Play endless community levels",
     ],
     image: levelBuilderImg,
-    accent: "indigo",
+    accent: "rgb(79, 195, 79)",
     cta: "Browse Levels",
     href: "https://steamcommunity.com/workshop/browse/?appid=1264520&browsesort=trend&section=readytouseitems&p=1&num_per_page=30&days=7&requiredtags%5B%5D=+Level",
   },
   {
-    icon: PaintBrushIcon,
+    icon: BrushIcon,
     tag: "Pet Maker",
     title: "Design your perfect companion",
     description:
@@ -36,7 +37,7 @@ const SPOTLIGHTS: Spotlight[] = [
       "Show off your creations online",
     ],
     image: petMakerImg,
-    accent: "pink",
+    accent: "rgb(79, 170, 224)",
     cta: "Browse Pets",
     href: "https://steamcommunity.com/workshop/browse/?appid=1264520&section=readytouseitems&p=1&requiredtags%5B%5D=Pet",
   },
@@ -47,31 +48,12 @@ export function MakeItYoursSection() {
     <Box
       component="section"
       className={classes.section}
-      py={{ base: 64, md: 96 }}
+      pt={{ base: 40, md: 56 }}
+      pb={{ base: 64, md: 96 }}
     >
-      <Box aria-hidden className={classes.blobs}>
-        <Box className={`${classes.blob} ${classes.blob1}`} />
-        <Box className={`${classes.blob} ${classes.blob2}`} />
-        <Box className={`${classes.blob} ${classes.blob3}`} />
-        <Box className={`${classes.blob} ${classes.blob4}`} />
-      </Box>
-
       <Container size="xl" className={classes.content}>
         <Flex direction="column" gap={{ base: 56, md: 72 }}>
-          <Stack>
-            <SectionHeading title="Make It Yours" maw={640} />
-
-            <Stack gap={0}>
-              <Text ta="center" fz={{ base: "md", sm: "lg" }}>
-                The adventure doesn't end when the credits roll.
-              </Text>
-
-              <Text ta="center" fz={{ base: "md", sm: "lg" }}>
-                Build your own levels and craft one-of-a-kind companions, then
-                share them with the world.
-              </Text>
-            </Stack>
-          </Stack>
+          <SectionHeading title="Make It Yours" maw={640} />
 
           {SPOTLIGHTS.map((data, i) => (
             <SpotlightRow key={data.tag} data={data} reversed={i % 2 === 1} />
