@@ -7,3 +7,4 @@ export const TIKTOK_URL = "https://www.tiktok.com/@playvibrantventure";
 export const BLUESKY_URL =
   "https://bsky.app/profile/vibrant-venture.bsky.social";
 export const INSTAGRAM_URL = "https://www.instagram.com/playvibrantventure";
+export const CONTACT_EMAIL_URL = "mailto:pattrigue@semag-games.com";

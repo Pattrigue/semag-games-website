@@ -11,6 +11,7 @@ import {
 import {
   ButterflyIcon,
   DiscordLogoIcon,
+  EnvelopeIcon,
   HeartIcon,
   type Icon,
   InstagramLogoIcon,
@@ -25,6 +26,7 @@ import violastro from "@/assets/violastro.webp";
 import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
 import {
   BLUESKY_URL,
+  CONTACT_EMAIL_URL,
   DISCORD_URL,
   INSTAGRAM_URL,
   STEAM_URL,
@@ -63,6 +65,11 @@ const SOCIALS: Social[] = [
     label: "Instagram",
     href: INSTAGRAM_URL,
     icon: InstagramLogoIcon,
+  },
+  {
+    label: "Email",
+    href: CONTACT_EMAIL_URL,
+    icon: EnvelopeIcon,
   },
 ];
 
@@ -135,7 +142,9 @@ export function Footer() {
                 <ActionIcon
                   component="a"
                   href={href}
-                  target="_blank"
+                  // mailto: opens the mail client in-place; a new tab would
+                  // just be a blank page in some browsers.
+                  target={href.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
                   variant="transparent"
