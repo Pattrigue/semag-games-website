@@ -12,7 +12,6 @@ import {
   ButterflyIcon,
   DiscordLogoIcon,
   EnvelopeIcon,
-  HeartIcon,
   type Icon,
   InstagramLogoIcon,
   SteamLogoIcon,
@@ -108,7 +107,7 @@ export function Footer() {
 
       <Container
         size="xl"
-        py={{ base: 40, sm: 48 }}
+        py={{ base: 24, sm: 28 }}
         className={classes.content}
       >
         <Flex
@@ -120,17 +119,14 @@ export function Footer() {
           <Group gap="md" wrap="nowrap">
             <Image src={logo} w={56} h={56} alt="" />
             <Box ta={{ base: "center", sm: "left" }}>
-              <Text c="dimmed" fz="xs">
+              <Text c="white" fz={22} lh={1.2}>
                 © {year} Semag Games
               </Text>
-              <Text c="dimmed" fz="sm">
+              <Text c="white" fz={22} lh={1.2}>
                 Made with{" "}
-                <HeartIcon
-                  size={14}
-                  weight="fill"
-                  color="var(--mantine-color-red-6)"
-                  style={{ verticalAlign: "-0.125em" }}
-                />{" "}
+                <Text component="span" fz={22} c="red.6">
+                  ♥
+                </Text>{" "}
                 by Pattrigue
               </Text>
             </Box>
