@@ -9,7 +9,9 @@ import {
   Text,
   Title,
 } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import {
+  FilmSlateIcon,
   GameControllerIcon,
   HammerIcon,
   PaintBrushIcon,
@@ -20,6 +22,7 @@ import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
 import { FeaturePill } from "@/pages/home/sections/PromoSection/components/FeaturePill";
+import { TrailerModal } from "@/pages/home/sections/PromoSection/components/TrailerModal";
 import { STEAM_URL } from "@/utils/urls";
 import classes from "./PromoSection.module.css";
 
@@ -31,6 +34,9 @@ const FEATURES = [
 ];
 
 export function PromoSection() {
+  const [trailerOpened, { open: openTrailer, close: closeTrailer }] =
+    useDisclosure(false);
+
   return (
     <Box className={classes.section}>
       <Box className={classes.backdrop}>
@@ -120,8 +126,13 @@ export function PromoSection() {
                 >
                   Play Now
                 </Button>
-                <Button size="md" variant="default">
-                  Learn More
+                <Button
+                  size="md"
+                  variant="default"
+                  leftSection={<FilmSlateIcon size={18} weight="fill" />}
+                  onClick={openTrailer}
+                >
+                  Watch Trailer
                 </Button>
               </Flex>
             </Flex>
@@ -135,6 +146,8 @@ export function PromoSection() {
           />
         </Flex>
       </Container>
+
+      <TrailerModal opened={trailerOpened} onClose={closeTrailer} />
     </Box>
   );
 }
