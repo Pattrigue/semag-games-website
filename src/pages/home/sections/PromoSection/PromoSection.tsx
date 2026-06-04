@@ -20,6 +20,7 @@ import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
 import { FeaturePill } from "@/pages/home/sections/PromoSection/components/FeaturePill";
+import { STEAM_URL } from "@/utils/urls";
 import classes from "./PromoSection.module.css";
 
 const FEATURES = [
@@ -107,6 +108,10 @@ export function PromoSection() {
                 justify={{ base: "center", md: "flex-start" }}
               >
                 <Button
+                  component="a"
+                  href={STEAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={classes.playButton}
                   size="md"
                   variant="gradient"
