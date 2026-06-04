@@ -1,16 +1,10 @@
 import { Carousel } from "@mantine/carousel";
-import { Box, Image, Stack } from "@mantine/core";
+import { AspectRatio, Box, Image, Stack } from "@mantine/core";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useRef } from "react";
 import { SectionHeading } from "@/components/SectionHeading";
+import { SCREENSHOTS } from "@/pages/home/sections/ScreenshotsSection/screenshots";
 import classes from "./ScreenshotsSection.module.css";
-
-// Placeholder screenshots — swap for real game captures later.
-const SCREENSHOTS = Array.from(
-  { length: 10 },
-  (_, i) =>
-    `https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-${i + 1}.png`,
-);
 
 const prefersReducedMotion =
   typeof window !== "undefined" &&
@@ -22,6 +16,7 @@ export function ScreenshotsSection() {
   const autoScroll = useRef(
     AutoScroll({
       speed: 1,
+      startDelay: 0,
       stopOnInteraction: false,
       stopOnMouseEnter: true,
       playOnInit: !prefersReducedMotion,
@@ -54,12 +49,13 @@ export function ScreenshotsSection() {
           {SCREENSHOTS.map((src, i) => (
             <Carousel.Slide key={src}>
               <Box className={classes.slideInner}>
-                <Image
-                  src={src}
-                  alt={`Vibrant Venture screenshot ${i + 1}`}
-                  h={{ base: 200, sm: 320 }}
-                  fit="cover"
-                />
+                {/* All captures are 16:9 — lock the ratio so nothing crops. */}
+                <AspectRatio ratio={16 / 9}>
+                  <Image
+                    src={src}
+                    alt={`Vibrant Venture screenshot ${i + 1}`}
+                  />
+                </AspectRatio>
               </Box>
             </Carousel.Slide>
           ))}

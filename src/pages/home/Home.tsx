@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mantine/core";
+import { Stack } from "@mantine/core";
 import { HeroSection } from "@/pages/home/sections/HeroSection/HeroSection";
 import { MakeItYoursSection } from "@/pages/home/sections/MakeItYoursSection/MakeItYoursSection";
 import { PromoSection } from "@/pages/home/sections/PromoSection/PromoSection";
