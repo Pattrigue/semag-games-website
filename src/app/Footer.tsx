@@ -20,7 +20,7 @@ import {
   YoutubeLogoIcon,
 } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/semag-logo-pixelated.png";
 import violastro from "@/assets/violastro.webp";
 import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
 import {
@@ -117,7 +117,7 @@ export function Footer() {
           gap="xl"
         >
           <Group gap="md" wrap="nowrap">
-            <Image src={logo} w={56} h={56} alt="" />
+            <Image src={logo} w={68} h={68} alt="" className={classes.logo} />
             <Box ta={{ base: "center", sm: "left" }}>
               <Text c="white" fz={22} lh={1.2}>
                 © {year} Semag Games

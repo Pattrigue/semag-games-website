@@ -27,9 +27,9 @@ export function ScreenshotsSection() {
     <Box
       component="section"
       className={classes.section}
-      pt={{ base: 28, md: 36 }}
       pb={{ base: 56, md: 80 }}
     >
+      <Box className={classes.backdrop} />
       <Stack gap="xl" className={classes.inner}>
         <RibbonHeading src={ribbonScreenshots} alt="Screenshots" />
 

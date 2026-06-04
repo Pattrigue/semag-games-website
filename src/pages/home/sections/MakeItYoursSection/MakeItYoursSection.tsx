@@ -49,7 +49,6 @@ export function MakeItYoursSection() {
     <Box
       component="section"
       className={classes.section}
-      pt={{ base: 40, md: 56 }}
       pb={{ base: 64, md: 96 }}
     >
       <Container size="xl" className={classes.content}>

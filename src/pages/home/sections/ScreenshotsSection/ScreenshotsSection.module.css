@@ -1,27 +1,32 @@
 .section {
   position: relative;
-  overflow: hidden;
   background: #10142e url("../../../../assets/night-sky-2x.png") repeat-x top;
 }
 
-.section::before,
-.section::after {
+.backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.backdrop::before,
+.backdrop::after {
   content: "";
   position: absolute;
   inset: 0 -1024px 0 0;
   background-repeat: repeat-x;
   background-position: bottom left;
   pointer-events: none;
-  z-index: 0;
 }
 
-.section::before {
+.backdrop::before {
   background-image: url("../../../../assets/night-clouds-2x.png");
   background-position: left 0 bottom -160px;
   animation: parallaxDrift 120s linear infinite;
 }
 
-.section::after {
+.backdrop::after {
   background-image: url("../../../../assets/night-trees-2x.png");
   background-position: left 0 bottom -240px;
   animation: parallaxDrift 70s linear infinite;
@@ -34,8 +39,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .section::before,
-  .section::after {
+  .backdrop::before,
+  .backdrop::after {
     animation: none;
   }
 }

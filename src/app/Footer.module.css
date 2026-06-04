@@ -93,6 +93,10 @@
   }
 }
 
+.logo {
+  image-rendering: pixelated;
+}
+
 .social {
   color: var(--mantine-color-gray-4);
   transition: color 150ms ease;
