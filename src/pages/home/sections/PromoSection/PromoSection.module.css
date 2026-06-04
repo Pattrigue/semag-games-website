@@ -17,6 +17,26 @@
   color: transparent;
 }
 
+/* Inline Violastro sprite next to his name, rendered with nearest-neighbor so
+   the pixel art stays crisp. 1.6x native (15x17) — a non-integer scale, so
+   pixel sizes are slightly uneven, but 2x crowds the line. height: auto keeps
+   the sprite's exact aspect ratio. */
+.violastroIcon {
+  width: 24px;
+  height: auto;
+  image-rendering: pixelated;
+  vertical-align: -0.25em;
+  /* The sprite's pixels run to the edge of its box, making the normal word
+     space look tighter on the left — pad it out to optically match. */
+  margin-left: 3px;
+}
+
+/* Violastro's signature purple, sampled from his sprite. */
+.violastroName {
+  color: rgb(37, 23, 77);
+  font-weight: 700;
+}
+
 /* Clips the oversized rotating sunburst to the section bounds, decoupled from
    .section so section content (the logo) can overflow freely. */
 .backdrop {

@@ -18,14 +18,15 @@ import {
 } from "@phosphor-icons/react";
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
+import violastroIcon from "@/assets/violastro-icon.png";
 import { FeaturePill } from "@/pages/home/sections/PromoSection/components/FeaturePill";
 import classes from "./PromoSection.module.css";
 
 const FEATURES = [
   { icon: GameControllerIcon, label: "Controller Support" },
-  { icon: UsersThreeIcon, label: "Online Multiplayer" },
   { icon: HammerIcon, label: "Level Builder" },
   { icon: PaintBrushIcon, label: "Pet Maker" },
+  { icon: UsersThreeIcon, label: "Online Multiplayer" },
 ];
 
 export function PromoSection() {
@@ -62,17 +63,30 @@ export function PromoSection() {
                 ta={{ base: "center", md: "left" }}
                 className={classes.title}
               >
-                Jump into the adventure
+                An adventure bursting with color
               </Title>
 
               <Text
-                c="dimmed"
                 fz={{ base: "md", sm: "lg" }}
                 ta={{ base: "center", md: "left" }}
               >
-                A colorful platformer packed with vibrant worlds, quirky
-                characters, and tight, satisfying gameplay. Dive in and play the
-                fucking game.
+                The dastardly{" "}
+                <img
+                  src={violastroIcon}
+                  alt=""
+                  className={classes.violastroIcon}
+                />{" "}
+                <span className={classes.violastroName}>Violastro</span> has
+                stolen the Power Crystals!
+              </Text>
+
+              <Text
+                fz={{ base: "md", sm: "lg" }}
+                ta={{ base: "center", md: "left" }}
+              >
+                Swap between four quirky heroes and combine their unique
+                abilities for fluid, versatile movement as you chase him down
+                across vibrant 2D worlds.
               </Text>
 
               <Flex
