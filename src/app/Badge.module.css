@@ -5,7 +5,7 @@
 }
 
 .root[data-variant="filled"] {
-  border: 2px solid color-mix(in srgb, var(--badge-bg) 55%, black);
+  border: 2px solid color-mix(in srgb, var(--badge-bg) 72%, white);
   color: white;
 }
 
