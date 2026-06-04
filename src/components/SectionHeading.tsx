@@ -19,7 +19,6 @@ export function SectionHeading({
   eyebrowColor = "pink.6",
   title,
   titleColor,
-  subtitle,
   maw,
 }: SectionHeadingProps) {
   return (
@@ -35,12 +34,6 @@ export function SectionHeading({
       >
         {title}
       </Title>
-
-      {subtitle ? (
-        <Text ta="center" fz={{ base: "md", sm: "lg" }}>
-          {subtitle}
-        </Text>
-      ) : null}
     </Stack>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "@mantine/core";
+import { Box, Container, Flex, Stack, Text } from "@mantine/core";
 import { HammerIcon, PaintBrushIcon } from "@phosphor-icons/react";
 import levelBuilderImg from "@/assets/level-builder.webp";
 import petMakerImg from "@/assets/pet-maker.webp";
@@ -58,13 +58,25 @@ export function MakeItYoursSection() {
 
       <Container size="xl" className={classes.content}>
         <Flex direction="column" gap={{ base: 56, md: 72 }}>
-          <SectionHeading
-            eyebrow="Create"
-            eyebrowColor="grape.6"
-            title="Make It Yours"
-            subtitle="The adventure doesn't end when the credits roll. Build your own levels and craft one-of-a-kind companions, then share them with the world."
-            maw={640}
-          />
+          <Stack>
+            <SectionHeading
+              eyebrow="Create"
+              eyebrowColor="grape.6"
+              title="Make It Yours"
+              maw={640}
+            />
+
+            <Stack gap={0}>
+              <Text ta="center" fz={{ base: "md", sm: "lg" }}>
+                The adventure doesn't end when the credits roll.
+              </Text>
+
+              <Text ta="center" fz={{ base: "md", sm: "lg" }}>
+                Build your own levels and craft one-of-a-kind companions, then
+                share them with the world.
+              </Text>
+            </Stack>
+          </Stack>
 
           {SPOTLIGHTS.map((data, i) => (
             <SpotlightRow key={data.tag} data={data} reversed={i % 2 === 1} />
