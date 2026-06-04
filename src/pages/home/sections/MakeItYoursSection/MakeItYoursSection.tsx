@@ -13,7 +13,7 @@ const SPOTLIGHTS: Spotlight[] = [
     tag: "Level Builder",
     title: "Build worlds, your way",
     description:
-      "Drop in platforms, hazards, and secrets with an editor that's as fun as the game itself — no code, no limits.",
+      "Drop in platforms, hazards, and secrets with an editor that's as fun as the game itself. No code, no limits.",
     bullets: [
       "Intuitive drag-and-drop editor",
       "Publish and share in seconds",
