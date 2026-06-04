@@ -1,5 +1,6 @@
 import {
   BackgroundImage,
+  Badge,
   Box,
   Button,
   Card,
@@ -21,16 +22,16 @@ import {
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
-import { FeaturePill } from "@/pages/home/sections/PromoSection/components/FeaturePill";
 import { TrailerModal } from "@/pages/home/sections/PromoSection/components/TrailerModal";
 import { STEAM_URL } from "@/utils/urls";
 import classes from "./PromoSection.module.css";
 
+// Pill colors match the four playable characters: red, green, blue, yellow.
 const FEATURES = [
-  { icon: GameControllerIcon, label: "Controller Support" },
-  { icon: HammerIcon, label: "Level Builder" },
-  { icon: PaintBrushIcon, label: "Pet Maker" },
-  { icon: UsersThreeIcon, label: "Online Multiplayer" },
+  { icon: GameControllerIcon, label: "Controller Support", color: "#e04f4f" },
+  { icon: HammerIcon, label: "Level Builder", color: "#4caf50" },
+  { icon: PaintBrushIcon, label: "Pet Maker", color: "#4aa8e0" },
+  { icon: UsersThreeIcon, label: "Online Multiplayer", color: "#e0a52e" },
 ];
 
 export function PromoSection() {
@@ -43,11 +44,11 @@ export function PromoSection() {
         <BackgroundImage src={sunburstBg} className={classes.sunburst} />
       </Box>
 
-      <Container size="xl" py={{ base: 52, md: 52 }}>
+      <Container size={1510} py={{ base: 52, md: 52 }}>
         <Flex
           align="center"
           direction={{ base: "column", md: "row" }}
-          gap={{ base: 40, md: 80 }}
+          gap={{ base: 40, md: 80, lg: 120 }}
         >
           <Card
             className={classes.card}
@@ -55,28 +56,26 @@ export function PromoSection() {
             w="100%"
             miw={0}
             radius="lg"
-            padding="xl"
+            padding="sm"
           >
             <Flex
+              className={classes.innerPanel}
               direction="column"
               gap="md"
-              align={{ base: "center", md: "flex-start" }}
+              align="center"
             >
               <Title
                 order={2}
-                fz={{ base: 28, sm: 38 }}
-                fw={800}
+                fz={{ base: 33, sm: 44 }}
+                fw={400}
                 lh={1.15}
-                ta={{ base: "center", md: "left" }}
+                ta="center"
                 className={classes.title}
               >
                 An adventure bursting with color
               </Title>
 
-              <Text
-                fz={{ base: "md", sm: "lg" }}
-                ta={{ base: "center", md: "left" }}
-              >
+              <Text fz={22} lh={1.4} ta="center">
                 The dastardly{" "}
                 <img
                   src={violastroIcon}
@@ -87,10 +86,7 @@ export function PromoSection() {
                 stolen the Power Crystals!
               </Text>
 
-              <Text
-                fz={{ base: "md", sm: "lg" }}
-                ta={{ base: "center", md: "left" }}
-              >
+              <Text fz={22} lh={1.4} ta="center">
                 Swap between four quirky heroes and combine their unique
                 abilities for fluid, versatile movement as you chase him down
                 across vibrant 2D worlds.
@@ -98,21 +94,25 @@ export function PromoSection() {
 
               <Flex
                 direction={{ base: "column", md: "row" }}
-                align={{ base: "center", md: "flex-start" }}
+                align="center"
+                justify="center"
                 wrap="wrap"
                 gap="xs"
               >
-                {FEATURES.map(({ icon, label }) => (
-                  <FeaturePill key={label} icon={icon} label={label} />
+                {FEATURES.map(({ icon: FeatureIcon, label, color }) => (
+                  <Badge
+                    key={label}
+                    variant="filled"
+                    color={color}
+                    radius="xl"
+                    leftSection={<FeatureIcon size={18} weight="bold" />}
+                  >
+                    {label}
+                  </Badge>
                 ))}
               </Flex>
 
-              <Flex
-                gap="md"
-                mt="sm"
-                wrap="wrap"
-                justify={{ base: "center", md: "flex-start" }}
-              >
+              <Flex gap="md" mt="sm" wrap="wrap" justify="center" w="100%">
                 <Button
                   component="a"
                   href={STEAM_URL}
@@ -140,7 +140,7 @@ export function PromoSection() {
             src={vibrantVentureCharacters}
             className={classes.characters}
             fit="contain"
-            w={{ base: 280, md: 520 }}
+            w={{ base: 280, md: 480 }}
           />
         </Flex>
       </Container>

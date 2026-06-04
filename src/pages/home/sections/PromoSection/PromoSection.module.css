@@ -4,17 +4,13 @@
   isolation: isolate;
 }
 
-/* Gradient headline. Mantine Title has no gradient variant, so clip a gradient
-   to the text manually. */
 .title {
-  background-image: linear-gradient(
-    45deg,
-    var(--mantine-color-red-6) 0%,
-    var(--mantine-color-grape-6) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: white;
+  font-family: LanaPixel, Nunito, sans-serif;
+  -webkit-font-smoothing: none;
+  /* One font-pixel of offset: LanaPixel's native size is 11px, so a single
+     pixel of the glyph grid is font-size / 11 = 1em / 11 at any size. */
+  text-shadow: 0 calc(1em / 11) 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Inline Violastro sprite next to his name, rendered with nearest-neighbor so
@@ -29,12 +25,14 @@
   /* The sprite's pixels run to the edge of its box, making the normal word
      space look tighter on the left — pad it out to optically match. */
   margin-left: 3px;
+  filter: drop-shadow(0 2px 0 rgb(183, 139, 207));
 }
 
 /* Violastro's signature purple, sampled from his sprite. */
 .violastroName {
   color: rgb(37, 23, 77);
   font-weight: 700;
+  text-shadow: 0 2px 0 rgb(183, 139, 207);
 }
 
 /* Clips the oversized rotating sunburst to the section bounds, decoupled from
@@ -89,27 +87,34 @@
   }
 }
 
+/* The game's gold Totals frame as a 9-sliced border. Pre-scaled 4x with
+   nearest-neighbor (10px ornate frame on a 32px sprite -> 40px on the 128px
+   asset) so it renders 1:1 with no scaling blur. The sprite's center is
+   transparent, so the card surface is painted by the background, clipped to
+   the padding box to keep it from bleeding under the frame's transparent
+   corners. */
 .card {
-  /* Frosted glass so the rainbow background bleeds through instead of the card
-     looking pasted on. */
-  background-color: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  /* Colored glow (purple + pink) tying the card to the vibrant palette. */
-  box-shadow:
-    0 18px 50px -12px rgba(139, 92, 246, 0.5),
-    0 8px 24px -8px rgba(236, 72, 153, 0.4);
-  transition:
-    transform 200ms ease,
-    box-shadow 200ms ease;
+  border: 40px solid transparent;
+  border-image: url("../../../../assets/container-gold-4x.png") 40 round;
+  /* The game's diagonal-stripe panel texture, tiled at the same 4x pixel
+     scale as the frame. */
+  background: #bca291 url("../../../../assets/container-pattern-4x.png") repeat;
+  background-clip: padding-box;
+  border-radius: 0;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 26px 64px -12px rgba(139, 92, 246, 0.6),
-    0 14px 34px -8px rgba(236, 72, 153, 0.5);
+/* Inner panel, like the game's settings rows: muted brown, simple rounded
+   corners, light text. */
+.innerPanel {
+  background-color: rgb(156, 122, 106);
+  border-radius: 12px;
+  padding: var(--mantine-spacing-xl);
+  color: white;
+  /* LanaPixel at multiples of its 11px native size so pixels stay square. */
+  font-family: LanaPixel, Nunito, sans-serif;
+  -webkit-font-smoothing: none;
+  /* Pixel-hard text shadow, inherited by all text in the panel. */
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {

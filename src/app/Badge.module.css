@@ -1,0 +1,17 @@
+.root {
+  text-transform: none;
+  height: auto;
+  padding: calc(var(--mantine-spacing-xs) / 2) var(--mantine-spacing-xs);
+}
+
+.root[data-variant="filled"] {
+  border: 2px solid color-mix(in srgb, var(--badge-bg) 55%, black);
+  color: white;
+}
+
+.label {
+  font-family: LanaPixel, Nunito, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-font-smoothing: none;
+}
