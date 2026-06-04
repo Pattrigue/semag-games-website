@@ -33,7 +33,7 @@ const SPOTLIGHTS: Spotlight[] = [
     bullets: [
       "Pixel-perfect art tools",
       "Frame-by-frame animation",
-      "Show your creations off online",
+      "Show off your creations online",
     ],
     image: petMakerImg,
     accent: "pink",
