@@ -11,7 +11,12 @@
   },
   "css": {
     "formatter": {
-        "indentStyle": "space"
+      "indentStyle": "space"
+    }
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space"
     }
   }
 }
