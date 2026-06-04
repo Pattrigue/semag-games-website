@@ -1,4 +1,4 @@
-import { Stack, Text, Title } from "@mantine/core";
+import { Stack, Title } from "@mantine/core";
 import { Eyebrow } from "@/components/Eyebrow";
 
 interface SectionHeadingProps {
