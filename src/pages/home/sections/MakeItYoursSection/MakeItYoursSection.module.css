@@ -2,12 +2,9 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  /* Soft base wash; the animated blobs layer the brand color on top. */
   background: linear-gradient(180deg, #f6f1ff 0%, #eef4ff 100%);
 }
 
-/* Living gradient: large, heavily-blurred pastel blobs that slowly drift and
-   pulse, overlapping into a morphing color field behind the content. */
 .blobs {
   position: absolute;
   inset: 0;

@@ -10,7 +10,11 @@ export const theme = createTheme({
   headings: { fontFamily: "Nunito, sans-serif" },
   components: {
     Badge: Badge.extend({
-      classNames: { root: badgeClasses.root, label: badgeClasses.label },
+      classNames: {
+        root: badgeClasses.root,
+        label: badgeClasses.label,
+        section: badgeClasses.section,
+      },
     }),
     Button: Button.extend({
       classNames: {

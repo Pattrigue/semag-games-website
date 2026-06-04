@@ -11,14 +11,12 @@ import {
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import {
-  FilmSlateIcon,
-  GameControllerIcon,
-  HammerIcon,
-  PaintBrushIcon,
-  PlayIcon,
-  UsersThreeIcon,
-} from "@phosphor-icons/react";
+import BlocksIcon from "pixelarticons/svg/blocks.svg?react";
+import BrushIcon from "pixelarticons/svg/brush.svg?react";
+import GamepadIcon from "pixelarticons/svg/gamepad.svg?react";
+import UsersIcon from "pixelarticons/svg/users.svg?react";
+import VideoIcon from "pixelarticons/svg/video.svg?react";
+import PlayFilledIcon from "@/assets/icons/play-filled.svg?react";
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
@@ -26,12 +24,12 @@ import { TrailerModal } from "@/pages/home/sections/PromoSection/components/Trai
 import { STEAM_URL } from "@/utils/urls";
 import classes from "./PromoSection.module.css";
 
-// Pill colors match the four playable characters: red, green, blue, yellow.
+// Pill colors are the four playable characters' palette colors.
 const FEATURES = [
-  { icon: GameControllerIcon, label: "Controller Support", color: "#e04f4f" },
-  { icon: HammerIcon, label: "Level Builder", color: "#4caf50" },
-  { icon: PaintBrushIcon, label: "Pet Maker", color: "#4aa8e0" },
-  { icon: UsersThreeIcon, label: "Online Multiplayer", color: "#e0a52e" },
+  { icon: GamepadIcon, label: "Controller Support", color: "rgb(224, 91, 79)" },
+  { icon: BlocksIcon, label: "Level Builder", color: "rgb(79, 195, 79)" },
+  { icon: BrushIcon, label: "Pet Maker", color: "rgb(79, 170, 224)" },
+  { icon: UsersIcon, label: "Online Multiplayer", color: "rgb(255, 178, 0)" },
 ];
 
 export function PromoSection() {
@@ -58,23 +56,27 @@ export function PromoSection() {
             radius="lg"
             padding="sm"
           >
+            {/* Title sits in its own dark container plaque, above the tan
+                text panel — like the game's menu titles. */}
+            <Box className={classes.titlePlaque}>
+              <Title
+                order={2}
+                fz={{ base: 22, sm: 33 }}
+                fw={400}
+                lh={1.15}
+                ta="center"
+                className={classes.title}
+              >
+                An Adventure Bursting With Color!
+              </Title>
+            </Box>
+
             <Flex
               className={classes.innerPanel}
               direction="column"
               gap="md"
               align="center"
             >
-              <Title
-                order={2}
-                fz={{ base: 33, sm: 44 }}
-                fw={400}
-                lh={1.15}
-                ta="center"
-                className={classes.title}
-              >
-                An adventure bursting with color
-              </Title>
-
               <Text fz={22} lh={1.4} ta="center">
                 The dastardly{" "}
                 <img
@@ -105,34 +107,37 @@ export function PromoSection() {
                     variant="filled"
                     color={color}
                     radius="xl"
-                    leftSection={<FeatureIcon size={18} weight="bold" />}
+                    leftSection={<FeatureIcon width={20} height={20} />}
                   >
                     {label}
                   </Badge>
                 ))}
               </Flex>
 
-              <Flex gap="md" mt="sm" wrap="wrap" justify="center" w="100%">
-                <Button
-                  component="a"
-                  href={STEAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  size="md"
-                  variant="filled"
-                  leftSection={<PlayIcon size={18} weight="fill" />}
-                >
-                  Play Now
-                </Button>
-                <Button
-                  size="md"
-                  variant="default"
-                  leftSection={<FilmSlateIcon size={18} weight="fill" />}
-                  onClick={openTrailer}
-                >
-                  Watch Trailer
-                </Button>
-              </Flex>
+            </Flex>
+
+            {/* Buttons live on the striped card surface, outside the tan
+                text panel — matching the game's menus. */}
+            <Flex gap="md" mt="md" mb="xs" wrap="wrap" justify="center">
+              <Button
+                component="a"
+                href={STEAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="md"
+                variant="filled"
+                leftSection={<PlayFilledIcon width={22} height={22} />}
+              >
+                Play Now
+              </Button>
+              <Button
+                size="md"
+                variant="default"
+                leftSection={<VideoIcon width={22} height={22} />}
+                onClick={openTrailer}
+              >
+                Watch Trailer
+              </Button>
             </Flex>
           </Card>
 

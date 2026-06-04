@@ -4,10 +4,6 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Deep brand purple (not flat black) so the footer feels part of the vibrant
-   palette and echoes the dark Screenshots band. Painted as an overlay ABOVE
-   Violastro so the part of him inside the footer is hidden — only his head
-   peeks over the top edge. */
 .root::after {
   content: "";
   position: absolute;
@@ -21,11 +17,6 @@
   z-index: 2;
 }
 
-/* Easter egg: Violastro peeks over the footer's top edge, centered, with his
-   lower half hidden behind the .root::after background. Hidden on mobile where
-   the footer stacks and the center is occupied. The wrapper owns the position
-   and the hover "pop"; the inner image owns the idle bob (separate transforms
-   so they compose). */
 .violastro {
   display: none;
 }
@@ -36,19 +27,13 @@
     position: absolute;
     left: 50%;
     bottom: 100%;
-    /* Center horizontally, then push down so most of him sits inside (and is
-       hidden by) the footer — only the top peeks above the edge. */
     transform: translate(-50%, 62%);
     z-index: 0;
     user-select: none;
-    /* Only his visible head is hoverable: the .root::after overlay sits above
-       his lower half and intercepts pointer events there. */
     cursor: pointer;
-    /* Springy pop, eased with a slight overshoot. */
     transition: transform 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  /* Pop up to greet you when you hover his head. */
   .violastro:hover {
     transform: translate(-50%, 18%);
   }
@@ -61,8 +46,6 @@
     animation: violastroBob 3s ease-in-out infinite;
   }
 
-  /* Click reaction: a bouncy jump up-and-down with a wiggle, overriding the
-     idle bob, then reverts (via onAnimationEnd) so it can fire again. */
   .violastroImg.wiggle {
     animation: violastroWiggle 1100ms ease-in-out;
   }

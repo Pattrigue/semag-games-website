@@ -12,8 +12,6 @@
   z-index: 0;
 }
 
-/* Cinematic scrim: darker top and bottom, lighter middle, so the logo and copy
-   stay readable over any frame of the footage. */
 .scrim {
   position: absolute;
   inset: 0;

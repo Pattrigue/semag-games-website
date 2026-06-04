@@ -1,5 +1,4 @@
 .content {
-  /* translucent base in the header's red tones so the page shows through */
   background: linear-gradient(
     135deg,
     rgba(139, 34, 50, 0.55) 0%,
@@ -7,11 +6,9 @@
     rgba(224, 96, 80, 0.5) 100%
   );
 
-  /* the "liquid glass" blur of whatever sits behind it */
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
 
-  /* soft edge highlight + depth */
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }

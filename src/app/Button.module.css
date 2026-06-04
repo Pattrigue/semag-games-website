@@ -16,6 +16,14 @@
   -webkit-font-smoothing: none;
 }
 
+.section[data-position="left"] {
+  margin-inline-end: 6px;
+}
+
+.section[data-position="right"] {
+  margin-inline-start: 6px;
+}
+
 .root[data-variant="filled"] {
   --fill: rgb(228, 159, 81);
   --shade: rgb(215, 97, 36);

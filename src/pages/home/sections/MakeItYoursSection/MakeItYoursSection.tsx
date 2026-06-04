@@ -59,12 +59,7 @@ export function MakeItYoursSection() {
       <Container size="xl" className={classes.content}>
         <Flex direction="column" gap={{ base: 56, md: 72 }}>
           <Stack>
-            <SectionHeading
-              eyebrow="Create"
-              eyebrowColor="grape.6"
-              title="Make It Yours"
-              maw={640}
-            />
+            <SectionHeading title="Make It Yours" maw={640} />
 
             <Stack gap={0}>
               <Text ta="center" fz={{ base: "md", sm: "lg" }}>

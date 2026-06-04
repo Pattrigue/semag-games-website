@@ -31,12 +31,7 @@ export function ScreenshotsSection() {
       py={{ base: 56, md: 80 }}
     >
       <Stack gap="xl" className={classes.inner}>
-        <SectionHeading
-          eyebrow="Screenshots"
-          eyebrowColor="pink.4"
-          title="Sights From the Adventure"
-          titleColor="white"
-        />
+        <SectionHeading title="Sights From the Adventure" titleColor="white" />
 
         {/* Full-bleed: no Container, so the strip spans the whole viewport. */}
         <Carousel

@@ -1,6 +1,5 @@
 .section {
   position: relative;
-  /* The oversized sunburst is clipped by .backdrop, not here. */
   isolation: isolate;
 }
 
@@ -8,35 +7,32 @@
   color: white;
   font-family: LanaPixel, Nunito, sans-serif;
   -webkit-font-smoothing: none;
-  /* One font-pixel of offset: LanaPixel's native size is 11px, so a single
-     pixel of the glyph grid is font-size / 11 = 1em / 11 at any size. */
   text-shadow: 0 calc(1em / 11) 0 rgba(0, 0, 0, 0.5);
 }
 
-/* Inline Violastro sprite next to his name, rendered with nearest-neighbor so
-   the pixel art stays crisp. 1.6x native (15x17) — a non-integer scale, so
-   pixel sizes are slightly uneven, but 2x crowds the line. height: auto keeps
-   the sprite's exact aspect ratio. */
+.titlePlaque {
+  width: 100%;
+  border: 12px solid transparent;
+  border-image: url("../../../../assets/container-dark-2x.png") 12 fill round;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-md);
+}
+
 .violastroIcon {
-  width: 24px;
+  width: 30px;
   height: auto;
   image-rendering: pixelated;
   vertical-align: -0.25em;
-  /* The sprite's pixels run to the edge of its box, making the normal word
-     space look tighter on the left — pad it out to optically match. */
   margin-left: 3px;
   filter: drop-shadow(0 2px 0 rgb(183, 139, 207));
 }
 
-/* Violastro's signature purple, sampled from his sprite. */
 .violastroName {
   color: rgb(37, 23, 77);
   font-weight: 700;
   text-shadow: 0 2px 0 rgb(183, 139, 207);
 }
 
-/* Clips the oversized rotating sunburst to the section bounds, decoupled from
-   .section so section content (the logo) can overflow freely. */
 .backdrop {
   position: absolute;
   inset: 0;
@@ -46,11 +42,6 @@
 
 .sunburst {
   position: absolute;
-  /* Square sized to 1.5x the larger viewport dimension (vmax), so it always
-     covers the section — wide on desktop, tall on mobile — and the rotating
-     square never reveals its corners (1.5x clears the ~1.41x diagonal). vmax
-     is used instead of % because the section's height is auto (content-driven),
-     so a percentage height would have nothing definite to resolve against. */
   top: 50%;
   left: 50%;
   width: 150vmax;
@@ -70,10 +61,7 @@
 }
 
 .characters {
-  /* ease-in-out approximates a sine ease, so the bob feels smooth at the
-     top/bottom of its travel rather than linear. */
   animation: bob 4s ease-in-out infinite;
-  /* Soft shadow so the cast lifts off the busy background. */
   filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.28));
 }
 
@@ -87,33 +75,21 @@
   }
 }
 
-/* The game's gold Totals frame as a 9-sliced border. Pre-scaled 4x with
-   nearest-neighbor (10px ornate frame on a 32px sprite -> 40px on the 128px
-   asset) so it renders 1:1 with no scaling blur. The sprite's center is
-   transparent, so the card surface is painted by the background, clipped to
-   the padding box to keep it from bleeding under the frame's transparent
-   corners. */
 .card {
-  border: 40px solid transparent;
-  border-image: url("../../../../assets/container-gold-4x.png") 40 round;
-  /* The game's diagonal-stripe panel texture, tiled at the same 4x pixel
-     scale as the frame. */
-  background: #bca291 url("../../../../assets/container-pattern-4x.png") repeat;
+  border: 20px solid transparent;
+  border-image: url("../../../../assets/container-gold-2x.png") 20 round;
+  background: #bca291 url("../../../../assets/container-pattern-2x.png") repeat;
   background-clip: padding-box;
   border-radius: 0;
 }
 
-/* Inner panel, like the game's settings rows: muted brown, simple rounded
-   corners, light text. */
 .innerPanel {
   background-color: rgb(156, 122, 106);
   border-radius: 12px;
-  padding: var(--mantine-spacing-xl);
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-xl);
   color: white;
-  /* LanaPixel at multiples of its 11px native size so pixels stay square. */
   font-family: LanaPixel, Nunito, sans-serif;
   -webkit-font-smoothing: none;
-  /* Pixel-hard text shadow, inherited by all text in the panel. */
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 

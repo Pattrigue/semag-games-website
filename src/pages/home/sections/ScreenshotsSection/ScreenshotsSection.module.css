@@ -1,12 +1,9 @@
 .section {
   position: relative;
   overflow: hidden;
-  /* Dark showcase band so the colorful screenshots pop and the page gets a
-     tonal beat between the light Promo and Make-it-yours sections. */
   background: linear-gradient(180deg, #181226 0%, #0d0a16 100%);
 }
 
-/* Soft brand-hued glow behind the strip so the dark isn't flat. */
 .section::before {
   content: "";
   position: absolute;
@@ -30,16 +27,13 @@
   z-index: 1;
 }
 
-/* Crisp edge + lift on each slide against the dark background. */
 .slideInner {
   border-radius: var(--mantine-radius-md);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.65);
+  border: 6px solid white;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* Fade the looping strip into the background at the viewport edges so the
-   full-bleed roulette reads as infinite instead of hard-cut. */
 .carousel {
   mask-image: linear-gradient(
     90deg,
