@@ -29,16 +29,13 @@ export function Header({ opened, toggle }: HeaderProps) {
           />
         )}
         <Group justify="space-between" style={{ flex: 1 }}>
-          {/* With the burger hidden there's nothing to balance on mobile, so
-              the logo stays left-aligned everywhere. */}
           <Group ml={NAV_ENABLED ? { base: "auto", sm: 0 } : 0}>
             <Image src={logo} w={75} h={75} />
             <Image
               src={semagGamesTypography}
               alt="Semag Games"
-              visibleFrom="sm"
               w="auto"
-              h={32}
+              h={{ base: 24, sm: 32 }}
               fit="contain"
             />
           </Group>
