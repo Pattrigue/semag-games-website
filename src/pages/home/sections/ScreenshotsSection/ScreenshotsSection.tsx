@@ -3,7 +3,8 @@ import { AspectRatio, Box, Image, Stack } from "@mantine/core";
 import { useReducedMotion } from "@mantine/hooks";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useRef } from "react";
-import ribbonScreenshots from "@/assets/ribbon-screenshots-2x.png";
+import ribbonScreenshots from "@/assets/ribbon-screenshots-3x.png";
+import { RibbonHeading } from "@/components/RibbonHeading";
 import { SCREENSHOTS } from "@/pages/home/sections/ScreenshotsSection/screenshots";
 import classes from "./ScreenshotsSection.module.css";
 
@@ -30,13 +31,7 @@ export function ScreenshotsSection() {
       pb={{ base: 56, md: 80 }}
     >
       <Stack gap="xl" className={classes.inner}>
-        <Box component="h2" className={classes.ribbonHeading}>
-          <img
-            src={ribbonScreenshots}
-            alt="Screenshots"
-            className={classes.ribbon}
-          />
-        </Box>
+        <RibbonHeading src={ribbonScreenshots} alt="Screenshots" />
 
         <Carousel
           classNames={{ root: classes.carousel }}

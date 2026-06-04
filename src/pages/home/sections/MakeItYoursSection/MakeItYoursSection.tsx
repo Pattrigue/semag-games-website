@@ -3,7 +3,8 @@ import BlocksIcon from "pixelarticons/svg/blocks.svg?react";
 import BrushIcon from "pixelarticons/svg/brush.svg?react";
 import levelBuilderImg from "@/assets/level-builder.webp";
 import petMakerImg from "@/assets/pet-maker.webp";
-import { SectionHeading } from "@/components/SectionHeading";
+import ribbonMakeItYours from "@/assets/ribbon-make-it-yours-3x.png";
+import { RibbonHeading } from "@/components/RibbonHeading";
 import { SpotlightRow } from "@/pages/home/sections/MakeItYoursSection/components/SpotlightRow";
 import type { Spotlight } from "@/pages/home/sections/MakeItYoursSection/types/spotlight";
 import classes from "./MakeItYoursSection.module.css";
@@ -52,9 +53,9 @@ export function MakeItYoursSection() {
       pb={{ base: 64, md: 96 }}
     >
       <Container size="xl" className={classes.content}>
-        <Flex direction="column" gap={{ base: 56, md: 72 }}>
-          <SectionHeading title="Make It Yours" maw={640} />
+        <RibbonHeading src={ribbonMakeItYours} alt="Make It Yours" mb={32} />
 
+        <Flex direction="column" gap={{ base: 56, md: 72 }}>
           {SPOTLIGHTS.map((data, i) => (
             <SpotlightRow key={data.tag} data={data} reversed={i % 2 === 1} />
           ))}

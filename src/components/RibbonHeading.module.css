@@ -1,0 +1,13 @@
+.heading {
+  margin: 0;
+  line-height: 0;
+  text-align: center;
+}
+
+.ribbon {
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 0 rgba(0, 0, 0, 0.3));
+}
