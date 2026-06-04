@@ -21,7 +21,7 @@ import {
   YoutubeLogoIcon,
 } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import violastro from "@/assets/violastro.webp";
 import violastroBwehehe from "@/assets/violastro-bwehehe.ogg";
 import {
