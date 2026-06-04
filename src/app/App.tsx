@@ -4,7 +4,7 @@ import "@mantine/carousel/styles.css";
 import { AppShell, MantineProvider } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Footer } from "@/app/Footer";
-import { Header } from "@/app/Header";
+import { Header, NAV_ENABLED } from "@/app/Header";
 import { Navbar } from "@/app/Navbar";
 import { theme } from "@/app/theme";
 import { Home } from "@/pages/home/Home";
@@ -18,7 +18,13 @@ export function App() {
     <MantineProvider theme={theme} forceColorScheme="light">
       <AppShell withBorder={false} header={{ height: HEADER_HEIGHT }}>
         <Header opened={opened} toggle={toggle} />
-        <Navbar opened={opened} onClose={close} headerHeight={HEADER_HEIGHT} />
+        {NAV_ENABLED && (
+          <Navbar
+            opened={opened}
+            onClose={close}
+            headerHeight={HEADER_HEIGHT}
+          />
+        )}
 
         <AppShell.Main>
           <Home />
