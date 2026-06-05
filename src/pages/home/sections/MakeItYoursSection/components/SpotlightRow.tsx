@@ -1,6 +1,7 @@
 import {
   AspectRatio,
   Badge,
+  Box,
   Button,
   Flex,
   Group,
@@ -39,27 +40,23 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
       align="center"
       gap={{ base: 32, md: 64 }}
     >
-      <AspectRatio
-        ratio={16 / 9}
-        flex={1.6}
-        w="100%"
-        miw={0}
-        className={classes.imageWrap}
-      >
-        <Image src={image} alt={tag} />
-      </AspectRatio>
+      <Box flex={1.6} w="100%" miw={0} className={classes.imageBlock}>
+        <AspectRatio ratio={16 / 9} className={classes.imageWrap}>
+          <Image src={image} alt={tag} />
+        </AspectRatio>
+        <Badge
+          variant="filled"
+          color={accent}
+          radius="xl"
+          leftSection={<FeatureIcon width={20} height={20} />}
+          className={classes.imageBadge}
+        >
+          {tag}
+        </Badge>
+      </Box>
 
       <GamePanel flex={1} miw={0}>
         <Stack gap="md" align="flex-start">
-          <Badge
-            variant="filled"
-            color={accent}
-            radius="xl"
-            leftSection={<FeatureIcon width={20} height={20} />}
-          >
-            {tag}
-          </Badge>
-
           <Title order={3} fz={33} fw={400} lh={1.15} className={classes.title}>
             {title}
           </Title>
