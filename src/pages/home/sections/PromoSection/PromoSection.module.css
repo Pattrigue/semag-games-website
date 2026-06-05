@@ -44,8 +44,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vmax;
-  height: 100vmax;
+  width: 120vmax;
+  height: 120vmax;
   transform: translate(-50%, -50%);
   transform-origin: center;
   animation: spin 180s linear infinite;
