@@ -1,6 +1,5 @@
 import { Box, Container, Flex } from "@mantine/core";
-import BlocksIcon from "pixelarticons/svg/blocks.svg?react";
-import BrushIcon from "pixelarticons/svg/brush.svg?react";
+import { HammerIcon, PaintBrushIcon } from "@phosphor-icons/react";
 import levelBuilderImg from "@/assets/level-builder.webp";
 import petMakerImg from "@/assets/pet-maker.webp";
 import ribbonMakeItYours from "@/assets/ribbon-make-it-yours-3x.png";
@@ -11,7 +10,7 @@ import classes from "./MakeItYoursSection.module.css";
 
 const SPOTLIGHTS: Spotlight[] = [
   {
-    icon: BlocksIcon,
+    icon: HammerIcon,
     tag: "Level Builder",
     title: "Build worlds, your way",
     description:
@@ -27,7 +26,7 @@ const SPOTLIGHTS: Spotlight[] = [
     href: "https://steamcommunity.com/workshop/browse/?appid=1264520&browsesort=trend&section=readytouseitems&p=1&num_per_page=30&days=7&requiredtags%5B%5D=+Level",
   },
   {
-    icon: BrushIcon,
+    icon: PaintBrushIcon,
     tag: "Pet Maker",
     title: "Design your perfect companion",
     description:

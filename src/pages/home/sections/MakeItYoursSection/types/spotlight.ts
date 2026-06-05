@@ -1,7 +1,7 @@
-import type { ComponentType, SVGProps } from "react";
+import type { Icon } from "@phosphor-icons/react";
 
 export interface Spotlight {
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  icon: Icon;
   tag: string;
   title: string;
   description: string;

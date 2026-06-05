@@ -11,12 +11,14 @@ import {
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import BlocksIcon from "pixelarticons/svg/blocks.svg?react";
-import BrushIcon from "pixelarticons/svg/brush.svg?react";
-import GamepadIcon from "pixelarticons/svg/gamepad.svg?react";
-import UsersIcon from "pixelarticons/svg/users.svg?react";
-import VideoIcon from "pixelarticons/svg/video.svg?react";
-import PlayFilledIcon from "@/assets/icons/play-filled.svg?react";
+import {
+  GameControllerIcon,
+  HammerIcon,
+  PaintBrushIcon,
+  PlayIcon,
+  UsersIcon,
+  VideoCameraIcon,
+} from "@phosphor-icons/react";
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
@@ -27,9 +29,13 @@ import classes from "./PromoSection.module.css";
 
 // Pill colors are the four playable characters' palette colors.
 const FEATURES = [
-  { icon: GamepadIcon, label: "Controller Support", color: "rgb(224, 91, 79)" },
-  { icon: BlocksIcon, label: "Level Builder", color: "rgb(79, 195, 79)" },
-  { icon: BrushIcon, label: "Pet Maker", color: "rgb(79, 170, 224)" },
+  {
+    icon: GameControllerIcon,
+    label: "Controller Support",
+    color: "rgb(224, 91, 79)",
+  },
+  { icon: HammerIcon, label: "Level Builder", color: "rgb(79, 195, 79)" },
+  { icon: PaintBrushIcon, label: "Pet Maker", color: "rgb(79, 170, 224)" },
   { icon: UsersIcon, label: "Online Multiplayer", color: "rgb(255, 178, 0)" },
 ];
 
@@ -57,8 +63,6 @@ export function PromoSection() {
             radius="lg"
             padding="sm"
           >
-            {/* Title sits in its own dark container plaque, above the tan
-                text panel — like the game's menu titles. */}
             <Box className={classes.titlePlaque}>
               <Title
                 order={2}
@@ -104,7 +108,7 @@ export function PromoSection() {
                       variant="filled"
                       color={color}
                       radius="xl"
-                      leftSection={<FeatureIcon width={20} height={20} />}
+                      leftSection={<FeatureIcon size={20} weight="fill" />}
                     >
                       {label}
                     </Badge>
@@ -113,8 +117,6 @@ export function PromoSection() {
               </Flex>
             </GamePanel>
 
-            {/* Buttons live on the striped card surface, outside the tan
-                text panel — matching the game's menus. */}
             <Flex gap="md" mt="md" mb="xs" wrap="wrap" justify="center">
               <Button
                 component="a"
@@ -123,14 +125,14 @@ export function PromoSection() {
                 rel="noopener noreferrer"
                 size="md"
                 variant="filled"
-                leftSection={<PlayFilledIcon width={22} height={22} />}
+                rightSection={<PlayIcon size={22} weight="fill" />}
               >
                 Play Now
               </Button>
               <Button
                 size="md"
                 variant="default"
-                leftSection={<VideoIcon width={22} height={22} />}
+                leftSection={<VideoCameraIcon size={22} weight="fill" />}
                 onClick={openTrailer}
               >
                 Watch Trailer

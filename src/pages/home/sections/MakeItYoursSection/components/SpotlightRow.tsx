@@ -10,8 +10,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { SteamLogoIcon } from "@phosphor-icons/react";
-import ChevronsRightIcon from "pixelarticons/svg/chevron-right-2.svg?react";
+import { CaretDoubleRightIcon, SteamLogoIcon } from "@phosphor-icons/react";
 import { GamePanel } from "@/components/GamePanel";
 import type { Spotlight } from "@/pages/home/sections/MakeItYoursSection/types/spotlight";
 import classes from "./SpotlightRow.module.css";
@@ -48,7 +47,7 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
           variant="filled"
           color={accent}
           radius="xl"
-          leftSection={<FeatureIcon width={20} height={20} />}
+          leftSection={<FeatureIcon size={20} weight="fill" />}
           className={classes.imageBadge}
         >
           {tag}
@@ -85,7 +84,7 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
             size="md"
             mt="sm"
             leftSection={<SteamLogoIcon size={20} weight="fill" />}
-            rightSection={<ChevronsRightIcon width={18} height={18} />}
+            rightSection={<CaretDoubleRightIcon size={18} weight="fill" />}
           >
             {cta}
           </Button>
