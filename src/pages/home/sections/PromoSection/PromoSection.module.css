@@ -3,19 +3,24 @@
   isolation: isolate;
 }
 
-.title {
-  color: white;
-  font-family: LanaPixel, Nunito, sans-serif;
-  -webkit-font-smoothing: none;
-  text-shadow: 0 calc(1em / 11) 0 rgba(0, 0, 0, 0.5);
+.ribbonHeading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  line-height: 0;
+  text-align: center;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
 }
 
-.titlePlaque {
-  width: 100%;
-  border: 12px solid transparent;
-  border-image: url("../../../../assets/container-dark-2x.png") 12 fill round;
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
-  margin-bottom: var(--mantine-spacing-md);
+.ribbon {
+  max-width: 90%;
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 6px 0 rgba(0, 0, 0, 0.3));
 }
 
 .violastroIcon {
@@ -83,6 +88,8 @@
 }
 
 .card {
+  position: relative;
+  overflow: visible;
   border: 20px solid transparent;
   border-image: url("../../../../assets/container-gold-2x.png") 20 round;
   background: #bca291 url("../../../../assets/container-pattern-2x.png") repeat;

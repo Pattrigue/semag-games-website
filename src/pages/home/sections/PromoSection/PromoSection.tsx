@@ -8,7 +8,6 @@ import {
   Flex,
   Image,
   Text,
-  Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
@@ -19,6 +18,7 @@ import {
   UsersIcon,
   VideoCameraIcon,
 } from "@phosphor-icons/react";
+import ribbonPromo from "@/assets/ribbon-promo-2x.png";
 import sunburstBg from "@/assets/sunburt-bg.webp";
 import vibrantVentureCharacters from "@/assets/vibrant-venture-characters.webp";
 import violastroIcon from "@/assets/violastro-icon.png";
@@ -27,7 +27,6 @@ import { TrailerModal } from "@/pages/home/sections/PromoSection/components/Trai
 import { STEAM_URL } from "@/utils/urls";
 import classes from "./PromoSection.module.css";
 
-// Pill colors are the four playable characters' palette colors.
 const FEATURES = [
   {
     icon: GameControllerIcon,
@@ -63,20 +62,15 @@ export function PromoSection() {
             radius="lg"
             padding="sm"
           >
-            <Box className={classes.titlePlaque}>
-              <Title
-                order={2}
-                fz={{ base: 22, sm: 33 }}
-                fw={400}
-                lh={1.15}
-                ta="center"
-                className={classes.title}
-              >
-                An Adventure Bursting With Color!
-              </Title>
+            <Box component="h2" className={classes.ribbonHeading}>
+              <img
+                src={ribbonPromo}
+                alt="Bursting With Colors"
+                className={classes.ribbon}
+              />
             </Box>
 
-            <GamePanel>
+            <GamePanel mt={36}>
               <Flex direction="column" gap="md" align="center">
                 <Text fz={22} lh={1.4} ta="center">
                   The dastardly{" "}
