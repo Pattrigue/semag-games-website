@@ -136,6 +136,7 @@ export function PromoSection() {
 
           <Image
             src={vibrantVentureCharacters}
+            alt="The four playable Vibrant Venture heroes, with Violastro and his minions looming behind them and the Power Crystals floating above"
             className={classes.characters}
             fit="contain"
             w={{ base: 280, md: 480 }}

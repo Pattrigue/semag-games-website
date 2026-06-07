@@ -30,7 +30,7 @@ export function Header({ opened, toggle }: HeaderProps) {
         )}
         <Group justify="space-between" style={{ flex: 1 }}>
           <Group ml={NAV_ENABLED ? { base: "auto", sm: 0 } : 0}>
-            <Image src={logo} w={75} h={75} />
+            <Image src={logo} alt="" w={75} h={75} />
             <Image
               src={semagGamesTypography}
               alt="Semag Games"
