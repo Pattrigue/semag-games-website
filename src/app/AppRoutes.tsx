@@ -1,9 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router";
+import { Home } from "@/pages/home/Home";
 
-const Home = lazy(() =>
-  import("@/pages/home/Home").then((m) => ({ default: m.Home })),
-);
 const About = lazy(() =>
   import("@/pages/about/About").then((m) => ({ default: m.About })),
 );
