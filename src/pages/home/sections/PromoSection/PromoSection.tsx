@@ -31,7 +31,7 @@ const FEATURES = [
   {
     icon: GameControllerIcon,
     label: "Controller Support",
-    color: "rgb(224, 91, 79)",
+    color: "rgb(226, 96, 79)",
   },
   { icon: HammerIcon, label: "Level Builder", color: "rgb(79, 195, 79)" },
   { icon: PaintBrushIcon, label: "Pet Maker", color: "rgb(79, 170, 224)" },
