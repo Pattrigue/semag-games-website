@@ -7,6 +7,8 @@ import { AppShell, ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import lanapixelWoff2 from "@/assets/fonts/lanapixel.woff2";
+import gameplayPoster from "@/assets/gameplay-poster.webp";
 import { Footer } from "@/app/Footer";
 import { Header, NAV_ENABLED } from "@/app/Header";
 import { Navbar } from "@/app/Navbar";
@@ -28,6 +30,23 @@ export function Layout({ children }: { children: ReactNode }) {
         <meta
           name="description"
           content="Vibrant Venture is a colorful 2D adventure platformer. Swap between four quirky heroes and combine their unique abilities to chase down the dastardly Violastro. Out now on Steam!"
+        />
+
+        {/* The hero video poster is the LCP element — fetch it alongside the
+            document instead of waiting for the <video poster> to be parsed.
+            The font is otherwise discovered late, behind fonts.css. */}
+        <link
+          rel="preload"
+          as="image"
+          href={gameplayPoster}
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href={lanapixelWoff2}
+          crossOrigin="anonymous"
         />
 
         <link rel="icon" href="/favicon.ico" sizes="48x48" />

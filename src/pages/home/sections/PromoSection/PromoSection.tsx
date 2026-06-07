@@ -66,6 +66,7 @@ export function PromoSection() {
               <img
                 src={ribbonPromo}
                 alt="Bursting With Colors"
+                loading="lazy"
                 className={classes.ribbon}
               />
             </Box>
@@ -77,6 +78,7 @@ export function PromoSection() {
                   <img
                     src={violastroIcon}
                     alt=""
+                    loading="lazy"
                     className={classes.violastroIcon}
                   />{" "}
                   <span className={classes.violastroName}>Violastro</span> has
@@ -137,6 +139,7 @@ export function PromoSection() {
           <Image
             src={vibrantVentureCharacters}
             alt="The four playable Vibrant Venture heroes, with Violastro and his minions looming behind them and the Power Crystals floating above"
+            loading="lazy"
             className={classes.characters}
             fit="contain"
             w={{ base: 280, md: 480 }}

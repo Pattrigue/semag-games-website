@@ -48,6 +48,7 @@ export function ScreenshotsSection() {
                   <Image
                     src={src}
                     alt={`Vibrant Venture screenshot ${i + 1}`}
+                    loading="lazy"
                   />
                 </AspectRatio>
               </Box>

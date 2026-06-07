@@ -41,7 +41,7 @@ export function SpotlightRow({ data, reversed }: SpotlightRowProps) {
     >
       <Box flex={1.6} w="100%" miw={0} className={classes.imageBlock}>
         <AspectRatio ratio={16 / 9} className={classes.imageWrap}>
-          <Image src={image} alt={tag} />
+          <Image src={image} alt={tag} loading="lazy" />
         </AspectRatio>
         <Badge
           variant="filled"

@@ -9,7 +9,7 @@ interface RibbonHeadingProps extends BoxProps {
 export function RibbonHeading({ src, alt, ...props }: RibbonHeadingProps) {
   return (
     <Box component="h2" className={classes.heading} {...props}>
-      <img src={src} alt={alt} className={classes.ribbon} />
+      <img src={src} alt={alt} loading="lazy" className={classes.ribbon} />
     </Box>
   );
 }

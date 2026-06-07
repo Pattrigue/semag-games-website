@@ -95,6 +95,7 @@ export function Footer() {
         <img
           src={violastro}
           alt=""
+          loading="lazy"
           className={`${classes.violastroImg}${wiggling ? ` ${classes.wiggle}` : ""}`}
           onAnimationEnd={() => setWiggling(false)}
         />
@@ -112,7 +113,14 @@ export function Footer() {
           gap="xl"
         >
           <Group gap="md" wrap="nowrap">
-            <Image src={logo} w={68} h={68} alt="" className={classes.logo} />
+            <Image
+              src={logo}
+              w={68}
+              h={68}
+              alt=""
+              loading="lazy"
+              className={classes.logo}
+            />
             <Box ta={{ base: "center", sm: "left" }}>
               <Text c="white" fz={22} lh={1.2}>
                 © {__BUILD_YEAR__} Semag Games
