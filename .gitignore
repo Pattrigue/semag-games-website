@@ -11,6 +11,8 @@
 /packages/vite/LICENSE
 dist
 dist-ssr
+/build/
+/.react-router/
 explorations
 node_modules
 playground-temp

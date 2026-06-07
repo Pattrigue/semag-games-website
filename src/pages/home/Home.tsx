@@ -4,7 +4,7 @@ import { MakeItYoursSection } from "@/pages/home/sections/MakeItYoursSection/Mak
 import { PromoSection } from "@/pages/home/sections/PromoSection/PromoSection";
 import { ScreenshotsSection } from "@/pages/home/sections/ScreenshotsSection/ScreenshotsSection";
 
-export function Home() {
+export default function Home() {
   return (
     <Stack gap={0}>
       <HeroSection />

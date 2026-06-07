@@ -73,9 +73,6 @@ const SOCIALS: Social[] = [
 ];
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
-  // Click Violastro for his signature "bwehehe" and a wiggle.
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [wiggling, setWiggling] = useState(false);
 
@@ -90,8 +87,6 @@ export function Footer() {
 
   return (
     <Box component="footer" className={classes.root}>
-      {/* Violastro, the purple villain, peeking up from behind the footer's top
-          edge; pops up on hover, cackles + wiggles on click. */}
       <div
         aria-hidden
         className={classes.violastro}
@@ -120,7 +115,7 @@ export function Footer() {
             <Image src={logo} w={68} h={68} alt="" className={classes.logo} />
             <Box ta={{ base: "center", sm: "left" }}>
               <Text c="white" fz={22} lh={1.2}>
-                © {year} Semag Games
+                © {__BUILD_YEAR__} Semag Games
               </Text>
               <Text c="white" fz={22} lh={1.2}>
                 Made with{" "}
@@ -138,8 +133,6 @@ export function Footer() {
                 <ActionIcon
                   component="a"
                   href={href}
-                  // mailto: opens the mail client in-place; a new tab would
-                  // just be a blank page in some browsers.
                   target={href.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}

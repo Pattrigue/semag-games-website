@@ -38,7 +38,7 @@ export function ScreenshotsSection() {
           slideSize={{ base: "80%", sm: "48%", md: "33%" }}
           slideGap="md"
           withControls={false}
-          emblaOptions={{ loop: true }}
+          emblaOptions={{ loop: true, align: "start" }}
           plugins={[autoScroll.current]}
         >
           {SCREENSHOTS.map((src, i) => (

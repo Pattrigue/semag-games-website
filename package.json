@@ -7,8 +7,8 @@
     "node": ">=26"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "react-router dev",
+    "build": "react-router typegen && tsc -b && react-router build",
     "format": "biome format --write .",
     "lint": "biome lint",
     "lint:fix": "biome lint --write",
@@ -19,16 +19,19 @@
     "@mantine/core": "^9.3.0",
     "@mantine/hooks": "^9.3.0",
     "@phosphor-icons/react": "^2.1.10",
+    "@react-router/node": "7.17.0",
     "embla-carousel": "^8.6.0",
     "embla-carousel-auto-scroll": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-router": "7.17.0"
+    "react-router": "7.17.0",
+    "isbot": "^5"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@biomejs/biome": "2.4.16",
+    "@react-router/dev": "7.17.0",
     "@rolldown/plugin-babel": "^0.2.3",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.12.3",
