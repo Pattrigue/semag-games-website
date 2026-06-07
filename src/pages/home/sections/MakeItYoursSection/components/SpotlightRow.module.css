@@ -19,7 +19,7 @@
 
 .title {
   color: white;
-  font-family: LanaPixel, Nunito, sans-serif;
+  font-family: LanaPixel, sans-serif;
   -webkit-font-smoothing: none;
   text-shadow: 0 calc(1em / 11) 0 rgba(0, 0, 0, 0.5);
 }
