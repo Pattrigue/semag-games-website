@@ -5,11 +5,11 @@ import "@/app/tokens.css";
 
 import { AppShell, MantineProvider } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { AppRoutes } from "@/app/AppRoutes";
 import { Footer } from "@/app/Footer";
 import { Header, NAV_ENABLED } from "@/app/Header";
 import { Navbar } from "@/app/Navbar";
 import { theme } from "@/app/theme";
-import { Home } from "@/pages/home/Home";
 
 const HEADER_HEIGHT = 100;
 
@@ -29,7 +29,7 @@ export function App() {
         )}
 
         <AppShell.Main>
-          <Home />
+          <AppRoutes />
           <Footer />
         </AppShell.Main>
       </AppShell>
