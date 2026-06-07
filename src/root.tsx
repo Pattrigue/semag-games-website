@@ -35,12 +35,7 @@ export function Layout({ children }: { children: ReactNode }) {
         {/* The hero video poster is the LCP element — fetch it alongside the
             document instead of waiting for the <video poster> to be parsed.
             The font is otherwise discovered late, behind fonts.css. */}
-        <link
-          rel="preload"
-          as="image"
-          href={gameplayPoster}
-          fetchPriority="high"
-        />
+        <link rel="preload" as="image" href={gameplayPoster} />
         <link
           rel="preload"
           as="font"
