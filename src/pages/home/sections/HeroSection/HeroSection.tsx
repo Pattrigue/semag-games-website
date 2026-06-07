@@ -2,6 +2,7 @@ import { Box, Button, Group, Image, Stack } from "@mantine/core";
 import { DiscordLogoIcon, SteamLogoIcon } from "@phosphor-icons/react";
 import gameplayMp4 from "@/assets/gameplay.mp4";
 import gameplayWebm from "@/assets/gameplay.webm";
+import gameplayPoster from "@/assets/gameplay-poster.webp";
 import vvLogo from "@/assets/vv-logo.webp";
 import { DISCORD_URL, STEAM_URL } from "@/utils/urls";
 import classes from "./HeroSection.module.css";
@@ -13,7 +14,16 @@ export function HeroSection() {
       className={classes.root}
       h={{ base: 600, md: 720 }}
     >
-      <video autoPlay muted loop playsInline className={classes.video}>
+      {/* poster = the video's own first frame: it paints immediately (and is
+          what LCP measures) while the heavy video streams in behind it. */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={gameplayPoster}
+        className={classes.video}
+      >
         {/* webm first (small, modern); mp4 fallback for older Safari/iOS. */}
         <source src={gameplayWebm} type="video/webm" />
         <source src={gameplayMp4} type="video/mp4" />
@@ -31,7 +41,6 @@ export function HeroSection() {
         pt={{ base: 12, md: 24 }}
         pb={{ base: 40, md: 64 }}
       >
-        {/* Branding anchored to the top. */}
         <Stack align="center" gap="md">
           <Box component="h1" className={classes.heading}>
             <Image
@@ -45,7 +54,6 @@ export function HeroSection() {
           </Box>
         </Stack>
 
-        {/* CTAs anchored to the bottom, letting the gameplay own the middle. */}
         <Group gap="md" justify="center">
           <Button
             component="a"
