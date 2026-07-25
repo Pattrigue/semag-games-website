@@ -2,7 +2,7 @@ import { AspectRatio, Modal } from "@mantine/core";
 import classes from "./TrailerModal.module.css";
 
 const TRAILER_EMBED_URL =
-  "https://www.youtube-nocookie.com/embed/SizLMkiLvdU?autoplay=1&rel=0";
+  "https://www.youtube-nocookie.com/embed/c2SyZstvJmc?autoplay=1&rel=0";
 
 interface TrailerModalProps {
   opened: boolean;
